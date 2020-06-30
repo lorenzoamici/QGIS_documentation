@@ -3,8 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+==============================================
 Welcome to QGIS documentation!
 ==============================================
+
+Title
+=====
 
 Subtitle
 ########
@@ -17,6 +21,22 @@ Sub subtitle
 :guilabel:`Processing Toolbox`
 
 :file:`excercise data`
+
+.. image:: img/1200px-QGIS_logo,_2017.svg.png
+	:width: 200px
+	:align: center
+
+.. figure:: img/1200px-QGIS_logo,_2017.svg.png
+	:width: 200px
+	:align: center
+
+	QGIS logo
+
+.. seealso:: This is a simple **seealso** note.
+
+.. note::  This is a **note** box.
+
+.. warning:: This is a *warning*.
 
 Sub sub subtitle
 ----------------
