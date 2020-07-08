@@ -46,6 +46,7 @@ Sub sub subtitle
    :caption: Contents:
 
    introduction/general
+   preparation/preparation
 
 
 Indices and tables

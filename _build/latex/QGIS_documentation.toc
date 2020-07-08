@@ -1,0 +1,8 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Title}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Subtitle}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Sub subtitle}{1}{subsection.1.1.1}
+\contentsline {subsubsection}{Sub sub subtitle}{1}{subsubsection*.3}
+\contentsline {paragraph}{General Info}{1}{paragraph*.4}
+\contentsline {subparagraph}{1. Purpose of this documentation}{2}{subparagraph*.5}
+\contentsline {subsection}{\numberline {1.1.2}Indices and tables}{2}{subsection.1.1.2}
