@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. include:: <isonum.txt>
+
 ==============================================
 Welcome to QGIS documentation!
 ==============================================
@@ -32,7 +34,7 @@ Sub subtitle
 
 	QGIS logo
 
-.. seealso:: This is a simple **seealso** note.
+.. seealso:: This is a simple **seealso** note |rarr|.
 
 .. note::  This is a **note** box.
 

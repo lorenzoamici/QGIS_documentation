@@ -169,5 +169,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
-
+def setup(app):
+    app.add_css_file('my_theme.css')
