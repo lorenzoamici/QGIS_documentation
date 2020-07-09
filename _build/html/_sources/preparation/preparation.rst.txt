@@ -6,7 +6,7 @@ In this section we will show all the necessary setup steps in order to follow al
 Install QGIS
 ###############
 
-Download QGIS 3.10 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.10.6-1-Setup-x86_64.exe>`_. 
+Download QGIS 3.14 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe>`_. 
 Other versions are available in the `QGIS Download page <https://qgis.org/en/site/forusers/download.html>`_.
 
 .. note:: After downloading QGIS, you will have various option to launch the program, as you see in this image:
@@ -161,7 +161,7 @@ in this way we shorten computational times and also provide consistency to the d
         + Create a vector layer using *Layer->Create Layer->New shapefile layer* or use the shortcut symbol |create_vector|
         + Specify its characteristics as follows:
 
-            - *File name*: PATH/area_of_interest.shp 
+            - *File name*: :file:`{path}/area_of_interest.shp`
             - *File encoding*: System
             - *Geometry type*: Polygon
             - The CRS should be by default set to the one of the maps but check it to be :guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`
@@ -176,13 +176,13 @@ in this way we shorten computational times and also provide consistency to the d
 
         + Right click on area_of_interest in the Layer panel and select “Toggle editing”
         + Right-click anywhere on the top toolbar (or go to *View->Toolbars* and add it from there) 
-        and enable the “Shape digitizing toolbar”. This way we can add a perfect rectangle polygon to our shapefile
+          and enable the “Shape digitizing toolbar”. This way we can add a perfect rectangle polygon to our shapefile
         + Click on “Add rectangle from extent”
 
         .. image:: ../img/2.5.1_add_rectangle.PNG
 
         + Draw a rectangle in the area around Seoul by left-clicking to start drawing from an angle and then right-clicking 
-        when the size is the desired one (not too big but big enough to contain some of the natural points, see the picture below)
+          when the size is the desired one (not too big but big enough to contain some of the natural points, see the picture below)
 
         .. image:: ../img/2.5.1_aoi.PNG
 
@@ -227,3 +227,6 @@ In order to continue with the tutorial please clip all the vector and the DTM ra
 .. note:: After clipping all the layers you can delete the starting layers from the Layers panel.
 
 The final configuration of the application and data should be like the one in the next image.
+
+.. image:: ../img/2.5.3_final_map.PNG
+    :width: 100%

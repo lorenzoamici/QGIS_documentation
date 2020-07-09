@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Line shapefiles &mdash; QGIS UN  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Polygon shapefiles" href="polygon.html" />
+    <link rel="prev" title="Vector operations" href="vector.html" />
+    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> QGIS UN
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">General Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">Preparation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vector.html">Vector operations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Line shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polygon.html">Polygon shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="point.html">Point shapefiles</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGIS UN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="vector.html">Vector operations</a> &raquo;</li>
+        
+      <li>Line shapefiles</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/vector/line.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="line-shapefiles">
+<h1>Line shapefiles<a class="headerlink" href="#line-shapefiles" title="Permalink to this headline">¶</a></h1>
+<p>We will now focus on the analysis and manipulation of line shapefiles. To do so, let’s consider only the <code class="file docutils literal notranslate"><span class="pre">roads_clip</span></code> shapefile.
+You can turn-off all the other layers in the Layers panel to have a more compact visualization of the data.</p>
+<a class="reference internal image-reference" href="../_images/3_roads_network.PNG"><img alt="../_images/3_roads_network.PNG" src="../_images/3_roads_network.PNG" style="width: 100%;" /></a>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt><strong>Buffer operations</strong></dt>
+<dd><p class="first">A very common operation with line shapefiles is the buffer which allows to create an area within a specified distance from features.
+Note that in QGIS a buffer can be done also around point or polygon shapefiles. To create a buffer, click on
+<em>Vector-&gt;Geoprocessing Tools-&gt;Buffer</em> and specify the input parameters as follows:</p>
+<ul class="simple">
+<li><em>Input layer</em>: the <code class="file docutils literal notranslate"><span class="pre">roads_clip</span></code> layer</li>
+<li><em>Distance</em>: the desired distance (in our case 10m). Note that you can also specify the unit of measure</li>
+<li><em>Segments</em>: the number of line segments to be used to approximate a quarter circle when creating rounded offsets (in our case 5)</li>
+<li><em>Buffered</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/3.1_buffer.PNG"><img alt="../_images/3.1_buffer.PNG" src="../_images/3.1_buffer.PNG" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This will create a buffer area around our roads layer; if you zoom on your map, the result should look the following.</p>
+<a class="reference internal image-reference" href="../_images/3.1_buffer_result.PNG"><img alt="../_images/3.1_buffer_result.PNG" src="../_images/3.1_buffer_result.PNG" style="width: 100%;" /></a>
+<p>You can also create multiple buffers around the same features, within a specified distance.</p>
+<p>To select the above function, we introduce here a very powerful instrument in QGIS: the Processing Toolbox. To add it to your window,
+go to <em>View-&gt;Panels</em> and tick “Processing Toolbox panel”. It should appear on the right side of your screen; this panel contains all
+the functions of QGIS, and in particular, the search bar is very useful to find the function you need.</p>
+<a class="reference internal image-reference" href="../_images/3.1_processing_toolbox.png"><img alt="../_images/3.1_processing_toolbox.png" src="../_images/3.1_processing_toolbox.png" style="width: 100%;" /></a>
+<p>In this case, you can search for “Multi-ring” and select the function <em>Multi-ring buffer (constant distance)</em>. The input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: the <code class="file docutils literal notranslate"><span class="pre">roads_clip</span></code> layer</li>
+<li><em>Number of rings</em>: in our case 3</li>
+<li><em>Distance between rings</em>: in our case 10m</li>
+<li><em>Multi-ring buffer (constant distance)</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<img alt="../_images/3.1_multi_ring_buffer.PNG" src="../_images/3.1_multi_ring_buffer.PNG" />
+<p>This will create a three buffer areas around our roads layer; if you zoom on your map, and if properly styled, the result should look like this:</p>
+<a class="last reference internal image-reference" href="../_images/3.1_multi_ring_buffer_result.PNG"><img alt="../_images/3.1_multi_ring_buffer_result.PNG" src="../_images/3.1_multi_ring_buffer_result.PNG" style="width: 100%;" /></a>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="polygon.html" class="btn btn-neutral float-right" title="Polygon shapefiles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector.html" class="btn btn-neutral float-left" title="Vector operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lorenzo Amici
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

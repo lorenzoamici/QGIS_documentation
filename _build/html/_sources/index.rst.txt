@@ -46,9 +46,12 @@ Sub sub subtitle
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
+   :titlesonly:
 
    introduction/general
    preparation/preparation
+   vector/vector
 
 
 Indices and tables
