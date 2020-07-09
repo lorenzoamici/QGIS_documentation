@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Preparation &mdash; QGIS UN  documentation</title>
+  <title>2. Preparation &mdash; QGIS UN  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="../vector/vector.html" />
-    <link rel="prev" title="General Info" href="../introduction/general.html" />
+    <link rel="next" title="Vector operations" href="../vector/vector.html" />
+    <link rel="prev" title="1. General Info" href="../introduction/general.html" />
     <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -91,15 +91,9 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">General Info</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Preparation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#install-qgis">Install QGIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#download-the-data">Download the data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-new-project">Create a new project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manipulate-crs-of-the-project-and-the-data">Manipulate CRS of the project and the data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#clip-all-the-data-to-the-study-area">Clip all the data to the study area</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vector/vector.html">Vector operations</a></li>
 </ul>
 
             
@@ -146,7 +140,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Preparation</li>
+      <li>2. Preparation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,10 +160,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="preparation">
-<h1>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h1>
+<h1>2. Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h1>
 <p>In this section we will show all the necessary setup steps in order to follow along the QGIS exercise.</p>
 <div class="section" id="install-qgis">
-<h2>Install QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Install QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
 <p>Download QGIS 3.14 (Long Term Release) for Windows 64bit at <a class="reference external" href="https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe">https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe</a>.
 Other versions are available in the <a class="reference external" href="https://qgis.org/en/site/forusers/download.html">QGIS Download page</a>.</p>
 <div class="admonition note">
@@ -181,10 +175,10 @@ functionalities that are only available using the tools that GRASS offers.</p>
 </div>
 </div>
 <div class="section" id="download-the-data">
-<h2>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="create-a-new-project">
-<h2>Create a new project<a class="headerlink" href="#create-a-new-project" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. Create a new project<a class="headerlink" href="#create-a-new-project" title="Permalink to this headline">¶</a></h2>
 <p>Before starting with the analysis of the data, we have to set up a new Project. To do so, run QGIS with GRASS and click on <em>New Project</em>
 (or press <kbd class="kbd docutils literal notranslate">Ctrl+N</kbd>).</p>
 <div class="figure" id="id1">
@@ -263,7 +257,7 @@ the added layers, but it records the path necessary to reach each one of the lay
 </div>
 </div>
 <div class="section" id="manipulate-crs-of-the-project-and-the-data">
-<h2>Manipulate CRS of the project and the data<a class="headerlink" href="#manipulate-crs-of-the-project-and-the-data" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. Manipulate CRS of the project and the data<a class="headerlink" href="#manipulate-crs-of-the-project-and-the-data" title="Permalink to this headline">¶</a></h2>
 <p>The data we use in our geo-analyses often come from different sources, and therefore also have a different Coordinate Reference System (CRS).
 In order to homogenize the works and assure that all the tools work correctly, it is recommended to reproject all the data in the same CRS.</p>
 <ol class="arabic">
@@ -323,7 +317,7 @@ by simply selecting the layers you want to delete in the Layer panel and then cl
 </div>
 </div>
 <div class="section" id="clip-all-the-data-to-the-study-area">
-<h2>Clip all the data to the study area<a class="headerlink" href="#clip-all-the-data-to-the-study-area" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Clip all the data to the study area<a class="headerlink" href="#clip-all-the-data-to-the-study-area" title="Permalink to this headline">¶</a></h2>
 <p>Often the data provided is in a wider area than the one needed, so we can define an area of interest and clip all the layers to that same area;
 in this way we shorten computational times and also provide consistency to the data.</p>
 <ol class="arabic">
@@ -432,10 +426,10 @@ new layers with the same name in order to be consistent with the naming</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../vector/vector.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../vector/vector.html" class="btn btn-neutral float-right" title="Vector operations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../introduction/general.html" class="btn btn-neutral float-left" title="General Info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../introduction/general.html" class="btn btn-neutral float-left" title="1. General Info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

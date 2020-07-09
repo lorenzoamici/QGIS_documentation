@@ -46,6 +46,7 @@ You can turn-off all the other layers in the Layers panel to have a more compact
     + *Multi-ring buffer (constant distance)*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
     
     .. image:: ../img/3.1_multi_ring_buffer.PNG
+        :width: 800px
 
     This will create a three buffer areas around our roads layer; if you zoom on your map, and if properly styled, the result should look like this:
 

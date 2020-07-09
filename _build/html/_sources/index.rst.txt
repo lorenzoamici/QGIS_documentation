@@ -48,6 +48,7 @@ Sub sub subtitle
    :caption: Contents:
    :glob:
    :titlesonly:
+   :numbered:
 
    introduction/general
    preparation/preparation

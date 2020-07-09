@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Polygon shapefiles &mdash; QGIS UN  documentation</title>
+  <title>3.2. Merge vector layers &mdash; QGIS UN  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Point shapefiles" href="point.html" />
-    <link rel="prev" title="Line shapefiles" href="line.html" />
+    <link rel="next" title="3.3. Overlay operations" href="overlay.html" />
+    <link rel="prev" title="3.1. Buffer operations" href="buffer.html" />
     <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -91,12 +91,12 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">General Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">Preparation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="vector.html">Vector operations</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="line.html">Line shapefiles</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Polygon shapefiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="point.html">Point shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vector.html">3. Vector operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Merge vector layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay.html">3.3. Overlay operations</a></li>
 </ul>
 </li>
 </ul>
@@ -145,15 +145,15 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="vector.html">Vector operations</a> &raquo;</li>
+          <li><a href="vector.html">3. Vector operations</a> &raquo;</li>
         
-      <li>Polygon shapefiles</li>
+      <li>3.2. Merge vector layers</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/vector/polygon.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/vector/merge.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -166,15 +166,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="polygon-shapefiles">
-<h1>Polygon shapefiles<a class="headerlink" href="#polygon-shapefiles" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="merge-vector-layers">
+<h1>3.2. Merge vector layers<a class="headerlink" href="#merge-vector-layers" title="Permalink to this headline">¶</a></h1>
 <p>Let’s now consider the polygons layers: in particular we will need the <code class="file docutils literal notranslate"><span class="pre">buildings</span></code>, <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code>, <code class="file docutils literal notranslate"><span class="pre">pois_a</span></code>, <code class="file docutils literal notranslate"><span class="pre">pofw_a</span></code>
 and <code class="file docutils literal notranslate"><span class="pre">water_a</span></code> layers, so you can hide all the others in the map.</p>
 <a class="reference internal image-reference" href="../_images/3.2_only_polygons.PNG"><img alt="../_images/3.2_only_polygons.PNG" src="../_images/3.2_only_polygons.PNG" style="width: 100%;" /></a>
-<ol class="arabic">
-<li><p class="first"><strong>Merge vector layers</strong></p>
-<blockquote>
-<div><p>The Merge vector layers function, available at <em>Processing Toolbox-&gt;Vector General-&gt;Merge vector layers</em>, provides an algorithm that
+<p>The Merge vector layers function, available at <em>Processing Toolbox-&gt;Vector General-&gt;Merge vector layers</em>, provides an algorithm that
 combines multiple vector layers of the same geometry type into a single one. If the attributes tables are different, the attribute
 table of the resulting layer will contain the attributes from all input layers. New attributes will be added for the original layer
 name and source. We will use it to combine the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> and the <code class="file docutils literal notranslate"><span class="pre">water_a</span></code> in order to get a general layer describing both
@@ -190,9 +187,6 @@ land and water features. To do so, the input parameters are:</p>
 </div>
 <p>As you can see this operation creates a new vector that contains features from both the landuse and water bodies layers:</p>
 <a class="reference internal image-reference" href="../_images/3.2_merge_result.PNG"><img alt="../_images/3.2_merge_result.PNG" src="../_images/3.2_merge_result.PNG" style="width: 100%;" /></a>
-</div></blockquote>
-</li>
-</ol>
 </div>
 
 
@@ -203,10 +197,10 @@ land and water features. To do so, the input parameters are:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="point.html" class="btn btn-neutral float-right" title="Point shapefiles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="overlay.html" class="btn btn-neutral float-right" title="3.3. Overlay operations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="line.html" class="btn btn-neutral float-left" title="Line shapefiles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="buffer.html" class="btn btn-neutral float-left" title="3.1. Buffer operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

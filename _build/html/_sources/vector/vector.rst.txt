@@ -6,6 +6,6 @@ Vector operations
    :caption: Contents:
    :glob:
 
-   ./line
-   ./polygon
-   ./point
+   ./buffer
+   ./merge
+   ./overlay

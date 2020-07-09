@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.3. Overlay operations &mdash; QGIS UN  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="3.2. Merge vector layers" href="merge.html" />
+    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> QGIS UN
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vector.html">3. Vector operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="merge.html">3.2. Merge vector layers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. Overlay operations</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGIS UN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="vector.html">3. Vector operations</a> &raquo;</li>
+        
+      <li>3.3. Overlay operations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/vector/overlay.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overlay-operations">
+<h1>3.3. Overlay operations<a class="headerlink" href="#overlay-operations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="union">
+<h2>3.3.1. Union<a class="headerlink" href="#union" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The Union function, available at <em>Vector-&gt;Geoprocessing-&gt;Union</em>, provides an algorithm that checks overlapping features within
+an input layer and creates separate features for overlapping and non-overlapping parts. The area of overlap will create as many
+identical overlapping features as there are features that participate to that overlap.</p>
+<p>In this exercise, we perform an Union between the <code class="file docutils literal notranslate"><span class="pre">pois_a</span></code> layer (points of interest) and the <code class="file docutils literal notranslate"><span class="pre">buildings_a</span></code> layer,
+so that we will get a layer representing both residential buildings and interest/public buildings. The input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: <code class="file docutils literal notranslate"><span class="pre">pois_a</span></code> layer</li>
+<li><em>Overlay layer</em>: <code class="file docutils literal notranslate"><span class="pre">buildings_a</span></code> layer</li>
+<li><em>Union</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/3.3.1_union.PNG"><img alt="../_images/3.3.1_union.PNG" src="../_images/3.3.1_union.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Union function window</span></p>
+</div>
+<p>The result, if zoomed, should look like the following:</p>
+<a class="reference internal image-reference" href="../_images/3.3.1_union_result.PNG"><img alt="../_images/3.3.1_union_result.PNG" src="../_images/3.3.1_union_result.PNG" style="width: 100%;" /></a>
+</div></blockquote>
+</div>
+<div class="section" id="intersection">
+<h2>3.3.2. Intersection<a class="headerlink" href="#intersection" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>We can now look at the Intersection function. It is available at <em>Vector-&gt;Geoprocessing Tools-&gt;Intersection</em>, and it provides a function
+that extracts the overlapping portions of the features of two layers and assigns these portions the attribute of both layers.
+We use it to see which buildings are also religious buildings. The input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: <code class="file docutils literal notranslate"><span class="pre">buildings_a</span></code> layer</li>
+<li><em>Overlay layer</em>: <code class="file docutils literal notranslate"><span class="pre">pofw_a</span></code> layer</li>
+<li><em>Intersection</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../_images/3.3.2_intersection.PNG"><img alt="../_images/3.3.2_intersection.PNG" src="../_images/3.3.2_intersection.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Intersection function window</span></p>
+</div>
+<p>The results should look like the following picture. As you can see, the intersection layer (yellow)
+only contains the buildings that also are religious buildings:</p>
+<img alt="../_images/3.3.2_intersection_result.PNG" src="../_images/3.3.2_intersection_result.PNG" />
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first"><strong>Dissolve</strong></p>
+<blockquote>
+<div><p>We will now use the Dissolve function applied to the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer. The Dissolve function, available at
+<em>Vector-&gt;Geoprocessing tools-&gt;Dissolve</em>, provides an algorithm that takes a vector layer and combines their features
+into new features. One or more attributes can be specified to dissolve features belonging to the same class (having
+the same value of a specific attribute), alternatively, all features can be dissolved into a single one.
+We will create a new landuse layer that has as many features as the different types of land use. The input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer</li>
+<li><em>Dissolve fields</em>: click the icon on the left and select the “fclass” attribute</li>
+<li><em>Dissolved</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../_images/3.3.3_dissolve.PNG"><img alt="../_images/3.3.3_dissolve.PNG" src="../_images/3.3.3_dissolve.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Dissolve function window</span></p>
+</div>
+<p>If you now check the attribute table of the newly created layer it should have only a few features, each corresponding to one type of land use.</p>
+<img alt="../_images/3.3.3_dissolved_result.PNG" src="../_images/3.3.3_dissolved_result.PNG" />
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Difference</strong></p>
+<blockquote>
+<div><p>We can now use the newly created <code class="file docutils literal notranslate"><span class="pre">landuse_dissolved</span></code> layer to perform a Difference operation. Difference is a function available at
+<em>Vector-&gt;Geoprocessing Tools-&gt;Difference</em>, that extracts features of an Input layer that fall outside features in the Overlay layer
+(totally or partially). If a feature of the Input layer partially overlaps a feature of the Overlay layer only the portions outside
+the Overlay layer features are retained. We will use it to filter out all the natural land use leaving only the industrial and urbanized ones.
+To do so, first, we have to select the natural landuse features:</p>
+<ul>
+<li><p class="first">Right-click on the <code class="file docutils literal notranslate"><span class="pre">landuse_dissolved</span></code> layer on the Layers panel</p>
+</li>
+<li><p class="first">Open its Attribute table</p>
+</li>
+<li><p class="first">Manually select the features having these classes by holding Ctrl and clicking on the row number on the left</p>
+<blockquote>
+<div><ul class="simple">
+<li>heath</li>
+<li>forest</li>
+<li>scrub</li>
+<li>orchard</li>
+<li>natural_reserve</li>
+<li>farm</li>
+<li>meadow</li>
+<li>vineyard</li>
+<li>grass</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="../_images/3.3.4_difference_selection.PNG" src="../_images/3.3.4_difference_selection.PNG" />
+<p>Now that we have selected those features, we can go on with the Difference operation. The input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer</li>
+<li><em>Overlay layer</em>: the <code class="file docutils literal notranslate"><span class="pre">landuse_dissolved</span></code> layer, but be sure to check the “Selected features only” checkbox</li>
+<li><em>Difference</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../_images/3.3.4_difference.PNG"><img alt="../_images/3.3.4_difference.PNG" src="../_images/3.3.4_difference.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Difference function window</span></p>
+</div>
+<p>The result will be a landuse layer that only retains the features with industrial and urbanized landuse types.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Symmetrical difference</strong></p>
+<blockquote>
+<div><p>The Symmetrical difference, available at <em>Vector-&gt;Geoprocessing Tools-&gt;Symmetrical Difference</em>, provides a function that extracts
+the portions of features from both the Input and Overlay layers that do not overlap. The attribute table of the Symmetrical Difference
+layer contains original attributes from both the Input and Overlay layers.</p>
+<p>If you look at the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer, you will see it has some portions that overlap with water features:</p>
+<div class="figure" id="id5">
+<img alt="../_images/3.3.5_landuse_water_1.PNG" src="../_images/3.3.5_landuse_water_1.PNG" />
+<p class="caption"><span class="caption-text">Water bodies (gray) overlapping landuse features (green)</span></p>
+</div>
+<div class="figure" id="id6">
+<img alt="../_images/3.3.5_landuse_water_2.PNG" src="../_images/3.3.5_landuse_water_2.PNG" />
+<p class="caption"><span class="caption-text">Only landuse features (green)</span></p>
+</div>
+<p>We will use the Symmetrical difference to obtain a landuse layer with no feature that has parts in water bodies.
+To do so, the input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: <code class="file docutils literal notranslate"><span class="pre">merge_vector</span></code> layer</li>
+<li><em>Overlay layer</em>: <code class="file docutils literal notranslate"><span class="pre">water_a</span></code> layer</li>
+<li><em>Symmetrical Difference</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../_images/3.3.5_symmetrical_difference.PNG"><img alt="../_images/3.3.5_symmetrical_difference.PNG" src="../_images/3.3.5_symmetrical_difference.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Symmetrical difference function window</span></p>
+</div>
+<p>Once the execution is done, the results should look like this:</p>
+<img alt="../_images/3.3.5_symmetrical_difference_result.PNG" src="../_images/3.3.5_symmetrical_difference_result.PNG" />
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Spatial join</strong></p>
+<blockquote>
+<div><p>As you see with the intersection function we can find the buildings that are also religious places. We will now use the
+Join Attributes by Location function (generally known as Spatial Join) available at <em>Vector-&gt;Data Management Tools-&gt;Join Attributes by Location</em>,
+to extend the previous analysis. The Join attributes by location is a function that takes an input vector layer and creates a new vector
+layer that is an extended version of the input one, with additional attributes in its attribute table. The additional attributes and their
+values are taken from a second vector layer applying spatial criteria to select the values from the second layer that are added to each
+feature from the first layer in the resulting one. In this way we could add the attribute that specifies the religion practised in a
+particular building; the input parameters are:</p>
+<ul class="simple">
+<li><em>Input layer</em>: the buildings layer</li>
+<li><em>Join layer</em>: the pofw_a layer</li>
+<li><em>Geometric predicate</em>: within</li>
+<li><em>Fields to add</em>: click on the icon on the left and select the “fclass” attribute</li>
+<li><em>Join type</em>: take attributes of the first located feature only (one-to-one)</li>
+<li>Tick the “Discard record which cannot be joined” option</li>
+<li><em>Joined layer</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<div class="figure" id="id8">
+<a class="reference internal image-reference" href="../_images/3.3.6_spatial_join.PNG"><img alt="../_images/3.3.6_spatial_join.PNG" src="../_images/3.3.6_spatial_join.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Join Attributes by Location function window</span></p>
+</div>
+<p>If you now look at the attribute table of the newly created layer, you will see a new attribute (fclass_2)
+that represents the religion practiced in that building.</p>
+<img alt="../_images/3.3.6_spatial_join_result.PNG" src="../_images/3.3.6_spatial_join_result.PNG" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Join Attributes by Location function, specifying the “intersects” predicate, also translates the “Identity” function of ArcGIS</p>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="merge.html" class="btn btn-neutral float-left" title="3.2. Merge vector layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lorenzo Amici
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
