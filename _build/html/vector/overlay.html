@@ -207,8 +207,9 @@ We use it to see which buildings are also religious buildings. The input paramet
 only contains the buildings that also are religious buildings:</p>
 <img alt="../_images/3.3.2_intersection_result.PNG" src="../_images/3.3.2_intersection_result.PNG" />
 </div></blockquote>
-<ol class="arabic">
-<li><p class="first"><strong>Dissolve</strong></p>
+</div>
+<div class="section" id="dissolve">
+<h2>3.3.3. Dissolve<a class="headerlink" href="#dissolve" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>We will now use the Dissolve function applied to the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer. The Dissolve function, available at
 <em>Vector-&gt;Geoprocessing tools-&gt;Dissolve</em>, provides an algorithm that takes a vector layer and combines their features
@@ -227,8 +228,9 @@ We will create a new landuse layer that has as many features as the different ty
 <p>If you now check the attribute table of the newly created layer it should have only a few features, each corresponding to one type of land use.</p>
 <img alt="../_images/3.3.3_dissolved_result.PNG" src="../_images/3.3.3_dissolved_result.PNG" />
 </div></blockquote>
-</li>
-<li><p class="first"><strong>Difference</strong></p>
+</div>
+<div class="section" id="difference">
+<h2>3.3.4. Difference<a class="headerlink" href="#difference" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>We can now use the newly created <code class="file docutils literal notranslate"><span class="pre">landuse_dissolved</span></code> layer to perform a Difference operation. Difference is a function available at
 <em>Vector-&gt;Geoprocessing Tools-&gt;Difference</em>, that extracts features of an Input layer that fall outside features in the Overlay layer
@@ -269,8 +271,9 @@ To do so, first, we have to select the natural landuse features:</p>
 </div>
 <p>The result will be a landuse layer that only retains the features with industrial and urbanized landuse types.</p>
 </div></blockquote>
-</li>
-<li><p class="first"><strong>Symmetrical difference</strong></p>
+</div>
+<div class="section" id="symmetrical-difference">
+<h2>3.3.5. Symmetrical difference<a class="headerlink" href="#symmetrical-difference" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>The Symmetrical difference, available at <em>Vector-&gt;Geoprocessing Tools-&gt;Symmetrical Difference</em>, provides a function that extracts
 the portions of features from both the Input and Overlay layers that do not overlap. The attribute table of the Symmetrical Difference
@@ -298,8 +301,9 @@ To do so, the input parameters are:</p>
 <p>Once the execution is done, the results should look like this:</p>
 <img alt="../_images/3.3.5_symmetrical_difference_result.PNG" src="../_images/3.3.5_symmetrical_difference_result.PNG" />
 </div></blockquote>
-</li>
-<li><p class="first"><strong>Spatial join</strong></p>
+</div>
+<div class="section" id="spatial-join">
+<h2>3.3.6. Spatial join<a class="headerlink" href="#spatial-join" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>As you see with the intersection function we can find the buildings that are also religious places. We will now use the
 Join Attributes by Location function (generally known as Spatial Join) available at <em>Vector-&gt;Data Management Tools-&gt;Join Attributes by Location</em>,
@@ -329,8 +333,6 @@ that represents the religion practiced in that building.</p>
 <p class="last">The Join Attributes by Location function, specifying the “intersects” predicate, also translates the “Identity” function of ArcGIS</p>
 </div>
 </div></blockquote>
-</li>
-</ol>
 </div>
 </div>
 

@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.6. Kernel density &mdash; QGIS UN  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.7. Inverse Distance Weighting" href="idw.html" />
+    <link rel="prev" title="3.5. Network analysis" href="network.html" />
+    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> QGIS UN
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vector.html">3. Vector operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="merge.html">3.2. Merge vector layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay.html">3.3. Overlay operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="proximity.html">3.4. Proximity analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">3.5. Network analysis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.6. Kernel density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idw.html">3.7. Inverse Distance Weighting</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGIS UN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="vector.html">3. Vector operations</a> &raquo;</li>
+        
+      <li>3.6. Kernel density</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/vector/kernel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kernel-density">
+<h1>3.6. Kernel density<a class="headerlink" href="#kernel-density" title="Permalink to this headline">¶</a></h1>
+<p>A useful tool to visualize the density of a point layer it is the Heatmap. In QGIS, we can directly use a styling option of the layer.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Right-click the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer on the Layers panel</li>
+<li>Select Properties</li>
+<li>In the menu on the left, select Symbology</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/3.6_simbology.PNG"><img alt="../_images/3.6_simbology.PNG" src="../_images/3.6_simbology.PNG" style="width: 800px;" /></a>
+<ul class="simple">
+<li>In the dropdown menu on top, select Heatmap</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/3.6_simbology_heatmap.PNG"><img alt="../_images/3.6_simbology_heatmap.PNG" src="../_images/3.6_simbology_heatmap.PNG" style="width: 800px;" /></a>
+<ul>
+<li><p class="first">Now you only have to choose the parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Color ramp: reds</li>
+<li>Radius and radius unit of measure: 10 millimetres</li>
+<li>Maximum value (leave Automatic)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/3.6_heatmap_parameters.PNG"><img alt="../_images/3.6_heatmap_parameters.PNG" src="../_images/3.6_heatmap_parameters.PNG" style="width: 800px;" /></a>
+<ul class="simple">
+<li>Then click OK button on the bottom</li>
+</ul>
+<p>The result is the visualization of the places layer as a heatmap, as you can see comparing
+the heatmap with a copy of the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer with the point symbols:</p>
+<a class="reference internal image-reference" href="../_images/3.6_heatmap_result.PNG"><img alt="../_images/3.6_heatmap_result.PNG" src="../_images/3.6_heatmap_result.PNG" style="width: 100%;" /></a>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="idw.html" class="btn btn-neutral float-right" title="3.7. Inverse Distance Weighting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="network.html" class="btn btn-neutral float-left" title="3.5. Network analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lorenzo Amici
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

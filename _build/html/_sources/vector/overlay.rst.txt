@@ -46,7 +46,8 @@ Intersection
 
     .. image:: ../img/3.3.2_intersection_result.PNG
 
-#. **Dissolve**
+Dissolve
+########
 
     We will now use the Dissolve function applied to the :file:`landuse_a` layer. The Dissolve function, available at 
     *Vector->Geoprocessing tools->Dissolve*, provides an algorithm that takes a vector layer and combines their features 
@@ -67,7 +68,8 @@ Intersection
 
     .. image:: ../img/3.3.3_dissolved_result.PNG
 
-#. **Difference**
+Difference
+##########
 
     We can now use the newly created :file:`landuse_dissolved` layer to perform a Difference operation. Difference is a function available at 
     *Vector->Geoprocessing Tools->Difference*, that extracts features of an Input layer that fall outside features in the Overlay layer 
@@ -104,7 +106,8 @@ Intersection
 
     The result will be a landuse layer that only retains the features with industrial and urbanized landuse types.
 
-#. **Symmetrical difference**
+Symmetrical difference
+######################
 
     The Symmetrical difference, available at *Vector->Geoprocessing Tools->Symmetrical Difference*, provides a function that extracts 
     the portions of features from both the Input and Overlay layers that do not overlap. The attribute table of the Symmetrical Difference 
@@ -136,7 +139,8 @@ Intersection
 
     .. image:: ../img/3.3.5_symmetrical_difference_result.PNG
 
-#. **Spatial join**
+Spatial join
+############
 
     As you see with the intersection function we can find the buildings that are also religious places. We will now use the 
     Join Attributes by Location function (generally known as Spatial Join) available at *Vector->Data Management Tools->Join Attributes by Location*, 

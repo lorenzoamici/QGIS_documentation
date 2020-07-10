@@ -9,3 +9,7 @@ Vector operations
    ./buffer
    ./merge
    ./overlay
+   ./proximity
+   ./network
+   ./kernel
+   ./idw

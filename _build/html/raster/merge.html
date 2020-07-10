@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.1. Merge raster &mdash; QGIS UN  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="4. Raster operations" href="raster.html" />
+    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> QGIS UN
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vector/vector.html">3. Vector operations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="raster.html">4. Raster operations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Merge raster</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGIS UN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="raster.html">4. Raster operations</a> &raquo;</li>
+        
+      <li>4.1. Merge raster</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/raster/merge.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="merge-raster">
+<h1>4.1. Merge raster<a class="headerlink" href="#merge-raster" title="Permalink to this headline">¶</a></h1>
+<p>We see now how to  Merge multiple raster layers. We do it by combining the Landsat8 imagery bands with the aim of creating a multi-band raster.
+To do so, we have to first add the raster bands into our QGIS project. From the the Browser panel, navigate to the raster data folder and into
+the folder containing the Landsat data (<code class="file docutils literal notranslate"><span class="pre">Landsat8_20160519_20170324_01_T1</span></code>). Then add the raster ending with B2, B3 and B4
+(in Landsat images they represent respectively the blue, green and red channels). These images are already in our prokect CRS (<span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span>)
+so once you added the raster data, go directly to <em>Raster-&gt;Miscellaneous-&gt;Merge</em>, and put this input parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Input layers</em>: click on the left symbol and select the Landsat_B2, Landsat_B3 and Landsat_B4 images</li>
+<li>Tick the “Place each input file into a separate band” checkbox: when not activated, this option is used to merge raster layers covering
+different area and not overlapping between each other. In our case we want to merge images that totally overlap between one another</li>
+<li><em>Output data type</em>: change it to UInt16 to be consistent with the original rasters</li>
+<li><em>Merged</em>: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+</div></blockquote>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/4.1_merge_raster.PNG"><img alt="../_images/4.1_merge_raster.PNG" src="../_images/4.1_merge_raster.PNG" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">The merge raster function window</span></p>
+</div>
+<p>The obtained multiband raster at first will look like this:</p>
+<a class="reference internal image-reference" href="../_images/4.1_merge_raster_result.PNG"><img alt="../_images/4.1_merge_raster_result.PNG" src="../_images/4.1_merge_raster_result.PNG" style="width: 100%;" /></a>
+<p>To obtain what is called a “true color image”, so a multiband raster whose color resembles the real ones, you have to change the band assigned to each
+color. To do so, right-click on the multiband raster and select properties. Go in the Symbology section, and you will see a window like the following:</p>
+<a class="reference internal image-reference" href="../_images/4.1_true_color_1.PNG"><img alt="../_images/4.1_true_color_1.PNG" src="../_images/4.1_true_color_1.PNG" style="width: 800px;" /></a>
+<p>Then, assign to the Red band the Band 3, to the Green band the Band 2 and to the Blue band the Band 1.</p>
+<a class="reference internal image-reference" href="../_images/4.1_true_color_2.PNG"><img alt="../_images/4.1_true_color_2.PNG" src="../_images/4.1_true_color_2.PNG" style="width: 800px;" /></a>
+<p>The true color map obtained should look like this:</p>
+<a class="reference internal image-reference" href="../_images/4.1_true_color_result.PNG"><img alt="../_images/4.1_true_color_result.PNG" src="../_images/4.1_true_color_result.PNG" style="width: 100%;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is not an accurate true color map because there was no atmospheric correction applied to the Landsat images,
+so you’ll find that its colors are brighter than the real ones.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="raster.html" class="btn btn-neutral float-left" title="4. Raster operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lorenzo Amici
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

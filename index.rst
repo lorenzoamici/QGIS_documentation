@@ -53,6 +53,7 @@ Sub sub subtitle
    introduction/general
    preparation/preparation
    vector/vector
+   raster/raster
 
 
 Indices and tables
