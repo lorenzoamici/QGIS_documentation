@@ -4,7 +4,7 @@ Preparation
 In this section we will show all the necessary setup steps in order to follow along the QGIS exercise.
 
 Install QGIS
-###############
+############
 
     Download QGIS 3.14 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe>`_. 
     Other versions are available in the `QGIS Download page <https://qgis.org/en/site/forusers/download.html>`_.
@@ -19,6 +19,19 @@ Install QGIS
 
 Download the data
 #################
+
+    The dataset used in the following exercises can be downloaded
+    `here <https://drive.google.com/drive/folders/1YF680v_fD7Xd-22LrElLrNhE5g3ssndx?usp=sharing>`_; it covers an area around the city of 
+    Seoul in South Korea and contains three different type of information:
+
+    + Landsat8 images in the folder :file:`LC08_L1TP_115034_20180721_20180731_01_T1`: it contains all the 11 available bands of the 
+      Landsat8 images in :guilabel:`WGS84/UTM zone 52N` coordinate system :guilabel:`EPSG:32652`.
+    + Aster Digital Elevation map (DTM at a resolution of 20 m) :file:`Seoul_DTM.tif`: a geotif in LongLat WGS84 coordinate system 
+      :guilabel:`EPSG:4326`.
+    + Open Street Map vector dataset in the folder :file:`south-korea-latest-free.shp`: these are 8 shapefiles downloaded 
+      from the OSM website. The files are in LongLat WGS84 coordinate system EPSG:4326.
+
+    Here we illustrate the :file:`Data` folder tree structure:
 
     ::
 
@@ -92,11 +105,12 @@ Create a new project
     (or press :kbd:`Ctrl+N`).
 
     .. figure:: ../img/2.3_new_project.PNG
+        :width: 100%
 
         Create a new project
 
-Import vector data
-------------------
+:index:`Import vector data <single: Import vector data>`
+--------------------------------------------------------
 
     To import vector data, go to *Layer->Add layer->Add vector layer* or use the Browser panel (usually placed above the Layer Panel on 
     the left side of the screen; if not, you can enable it by clicking *View->Panels* and tick “Browser panel”). In the Browser, you can 
@@ -123,8 +137,8 @@ Import vector data
     + :file:`roads.shp`
     + :file:`water_a.shp`
 
-Import raster data
-------------------
+:index:`Import raster data <single: Import raster data>`
+--------------------------------------------------------
 
     To import raster data, you can go to *Layer->Add layer->Add raster layer* or drag and drop them from the Browser panel.
     For this exercise, you can add the following data:
@@ -140,7 +154,7 @@ Layers panel
     Once you add all the data it should look like this:
 
     .. figure:: ../img/2.3.4_layers_panel.PNG
-        :width: 200px
+        :width: 250px
 
         The Layers panel
 
@@ -170,8 +184,8 @@ Manipulate CRS of the project and the data
 The data we use in our geo-analyses often come from different sources, and therefore also have a different Coordinate Reference System (CRS). 
 In order to homogenize the works and assure that all the tools work correctly, it is recommended to reproject all the data in the same CRS.
 
-Reprojecting vector layers
---------------------------
+:index:`Reprojecting vector layers <single: Reproject vector>`
+------------------------------------------------------------------------
 
     This tool is available at *Vector->Data management tools->Reproject layer*. It provides a function that reprojects a vector layer, creating a new 
     layer with the same features as the input one, but with geometries reprojected to a new CRS. 
@@ -184,12 +198,12 @@ Reprojecting vector layers
     + *Reprojected*: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created
 
     .. figure:: ../img/2.4.1_reproject_layer.PNG
-        :width: 100%
+        :width: 800px
 
         Reproject layer function window
 
-Reprojecting raster layers
---------------------------
+:index:`Reprojecting raster layers <single: Reproject raster>`
+------------------------------------------------------------------------
 
     Available at *Raster->Projections->Warp (reproject)*, it provides a function that reprojects a raster layer. The tool requires as input:
     
@@ -200,18 +214,16 @@ Reprojecting raster layers
     + *Reprojected*:  the path and the name of the output raster layer. Note that if left empty a temporary layer will be created
 
     .. figure:: ../img/2.4.2_reproject_raster.PNG
-        :width: 100%
+        :width: 800px
 
         Reproject raster function window
 
 In order to continue with the tutorial please reproject all the imported vector and raster layers following the examples above.
 Once all the layers are reprojected we need to check if the CRS of the project is the same as the data: to do so, click on the 
-CRS setting button 
+CRS setting button in the bottom right of the window and select also here :guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`.
 
 .. image:: ../img/2.4.2_reproject_map.png
-
-in the bottom right of the window and select also here 
-:guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`.
+    :width: 100%
 
 .. note:: In this exercise we will refer to the new reprojected layers as :file:`{originalname}_rep`. 
     You can create your new layers with the same name in order to be consistent with the naming.
@@ -220,7 +232,7 @@ in the bottom right of the window and select also here
     by simply selecting the layers you want to delete in the Layer panel and then click on the Remove layer/Group button.
 
     .. image:: ../img/2.4.2_remove_layers.PNG
-        :width: 200px
+        :width: 250px
 
 Clip all the data to the study area
 ###################################
@@ -228,8 +240,8 @@ Clip all the data to the study area
 Often the data provided is in a wider area than the one needed, so we can define an area of interest and clip all the layers to that same area; 
 in this way we shorten computational times and also provide consistency to the data.
 
-Create the working area
------------------------
+:index:`Create the working area <single: Create new vector layer>`
+------------------------------------------------------------------
 
     We will create a vector polygon layer, in the shape of a rectangle, that will represent the area we are considering in this tutorial. 
     In order to do so: 
@@ -243,6 +255,7 @@ Create the working area
             - The CRS should be by default set to the one of the maps but check it to be :guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`
 
             .. image:: ../img/2.5.1_area_of_interest.PNG
+                :width: 800px
 
         + Click “Ok”
 
@@ -261,13 +274,14 @@ Create the working area
           when the size is the desired one (not too big but big enough to contain some of the natural points, see the picture below)
 
         .. image:: ../img/2.5.1_aoi.PNG
+            :width: 100%
 
         + Click on “Save layer edits” and toggle editing off
 
     Now that you have your working area layer we can clip all our layers to it.
 
-Clipping vector layers
-----------------------
+:index:`Clipping vector layers <single: Clip vector>`
+----------------------------------------------------------------
 
     Available at *Vector->Geoprocessing tools->Clip*. It provides an algorithm that clips a vector layer using the features of another polygon layer. 
     Only the parts of the features in the Input layer that fall within the polygons of the Overlay layer will be added to the resulting layer. 
@@ -280,11 +294,12 @@ Clipping vector layers
         + *Clipped*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
         .. figure:: ../img/2.5.2_clip_vector.PNG
+            :width: 800px
 
             Clip vector function layer
 
-Clipping raster layers
-----------------------
+:index:`Clipping raster layers <single: Clip raster>`
+----------------------------------------------------------------
 
     Available at *Raster->Extraction->Clip raster by mask layer*, it provides an algorithm that clips a raster layer using a vector layer as a mask. 
     The input parameters are:
@@ -294,6 +309,7 @@ Clipping raster layers
         + *Clipped (extent)*: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created
 
         .. figure:: ../img/2.5.3_clip_raster.PNG
+            :width: 800px
 
             Clip raster by mask layer function window
 

@@ -1,5 +1,5 @@
-Inverse Distance Weighting
-==========================
+:index:`Inverse Distance Weighting <single: IDW>`
+=================================================
 
 We can also interpolate a point layer to create a raster layer out of it. One method to do so is the Inverse Distance Weighting (IDW) 
 interpolation technique. To perform IDW interpolation in QGIS we have to rely on the external functionalities provided by GRASS GIS that 

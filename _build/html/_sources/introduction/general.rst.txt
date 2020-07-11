@@ -11,7 +11,36 @@ or entities. The UN Open GIS Initiative strategy shall collaboratively and coope
 technical capabilities with all the appropriate documentation and training that in the end provides a united effort to improve the effectiveness 
 and efficiency of utilizing Open Source GIS around the world.”
 
-1. Purpose of this documentation
-################################
+Purpose of this documentation
+#############################
 
-This educational material is designed as a step-by-step software learning guide for QGIS.
+This educational material is designed as a step-by-step software learning guide for QGIS. It contains the description 
+of some functions for environmental analysis of vector and raster data, and a hands-on example for each function described.
+The purpose of this quick start document is to introduce the user in the use of the main algorithms contained in QGIS and used
+in environmental analysis.
+
+Target audience
+###############
+
+The primary target audience for this documentations is intermediate QGIS users with a background of data analysis and 
+management in a GIS environment
+
+License
+#######
+
+This educational material was written by Lorenzo Amici and Daniele Oxoli of Politecnico di Milano.
+
+It is distributed according to the CREATIVE COMMONS deed: Attribution - NoDerivs 2.0. According to this license type you are free to:
+
++ copy, distribute, display and perform the work
++ make commercial use of the work
+
+Under the following conditions:
+
++ you must attribute the work in the manner specified by the author or licensor
++ you may not alter, transform, or build upon this work.
+
+For any reuse or distribution, you must make clear to others the license terms of this work. Any of these conditions can be waived 
+if you get permission from the copyright holder.
+Your fair use and other rights are in no way affected by the above. This is a human-readable summary of the Legal Code (the full license) 
+that can be consulted at `this website <https://creativecommons.org/terms/>`_.

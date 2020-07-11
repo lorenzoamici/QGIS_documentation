@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/1200px-QGIS_logo,_2017.svg.png" class="logo" alt="Logo"/>
+          
           </a>
 
           
@@ -117,7 +120,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -180,7 +183,19 @@ functionalities that are only available using the tools that GRASS offers.</p>
 <div class="section" id="download-the-data">
 <h2>2.2. Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Data
+<div><p>The dataset used in the following exercises can be downloaded
+<a class="reference external" href="https://drive.google.com/drive/folders/1YF680v_fD7Xd-22LrElLrNhE5g3ssndx?usp=sharing">here</a>; it covers an area around the city of
+Seoul in South Korea and contains three different type of information:</p>
+<ul class="simple">
+<li>Landsat8 images in the folder <code class="file docutils literal notranslate"><span class="pre">LC08_L1TP_115034_20180721_20180731_01_T1</span></code>: it contains all the 11 available bands of the
+Landsat8 images in <span class="guilabel">WGS84/UTM zone 52N</span> coordinate system <span class="guilabel">EPSG:32652</span>.</li>
+<li>Aster Digital Elevation map (DTM at a resolution of 20 m) <code class="file docutils literal notranslate"><span class="pre">Seoul_DTM.tif</span></code>: a geotif in LongLat WGS84 coordinate system
+<span class="guilabel">EPSG:4326</span>.</li>
+<li>Open Street Map vector dataset in the folder <code class="file docutils literal notranslate"><span class="pre">south-korea-latest-free.shp</span></code>: these are 8 shapefiles downloaded
+from the OSM website. The files are in LongLat WGS84 coordinate system EPSG:4326.</li>
+</ul>
+<p>Here we illustrate the <code class="file docutils literal notranslate"><span class="pre">Data</span></code> folder tree structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Data
 ├── RASTER
 │   ├── Landsat8_20160519_20170324_01_T1
 │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_ANG.txt
@@ -251,12 +266,12 @@ functionalities that are only available using the tools that GRASS offers.</p>
 <div><p>Before starting with the analysis of the data, we have to set up a new Project. To do so, run QGIS with GRASS and click on <em>New Project</em>
 (or press <kbd class="kbd docutils literal notranslate">Ctrl+N</kbd>).</p>
 <div class="figure" id="id1">
-<img alt="../_images/2.3_new_project.PNG" src="../_images/2.3_new_project.PNG" />
+<a class="reference internal image-reference" href="../_images/2.3_new_project.PNG"><img alt="../_images/2.3_new_project.PNG" src="../_images/2.3_new_project.PNG" style="width: 100%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.3.1 </span><span class="caption-text">Create a new project</span></p>
 </div>
 </div></blockquote>
 <div class="section" id="import-vector-data">
-<h3>2.3.1. Import vector data<a class="headerlink" href="#import-vector-data" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.1. <span class="target" id="index-0"></span>Import vector data<a class="headerlink" href="#import-vector-data" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>To import vector data, go to <em>Layer-&gt;Add layer-&gt;Add vector layer</em> or use the Browser panel (usually placed above the Layer Panel on
 the left side of the screen; if not, you can enable it by clicking <em>View-&gt;Panels</em> and tick “Browser panel”). In the Browser, you can
@@ -283,7 +298,7 @@ search the data folder and simply drag and drop the files in the map.</p>
 </div></blockquote>
 </div>
 <div class="section" id="import-raster-data">
-<h3>2.3.2. Import raster data<a class="headerlink" href="#import-raster-data" title="Permalink to this headline">¶</a></h3>
+<h3>2.3.2. <span class="target" id="index-1"></span>Import raster data<a class="headerlink" href="#import-raster-data" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>To import raster data, you can go to <em>Layer-&gt;Add layer-&gt;Add raster layer</em> or drag and drop them from the Browser panel.
 For this exercise, you can add the following data:</p>
@@ -299,7 +314,7 @@ For this exercise, you can add the following data:</p>
 below the Browser panel, but if you don’t have it activated you can do so by clicking on <em>View-&gt;Panels</em> and tick “Layers”.</p>
 <p>Once you add all the data it should look like this:</p>
 <div class="figure" id="id4">
-<a class="reference internal image-reference" href="../_images/2.3.4_layers_panel.PNG"><img alt="../_images/2.3.4_layers_panel.PNG" src="../_images/2.3.4_layers_panel.PNG" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/2.3.4_layers_panel.PNG"><img alt="../_images/2.3.4_layers_panel.PNG" src="../_images/2.3.4_layers_panel.PNG" style="width: 250px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.3.3.1 </span><span class="caption-text">The Layers panel</span></p>
 </div>
 <p>The Layers panel can also be used to choose which layers we want to see in our map: just by unticking a layer we hide it from our map.
@@ -329,7 +344,7 @@ the added layers, but it records the path necessary to reach each one of the lay
 <p>The data we use in our geo-analyses often come from different sources, and therefore also have a different Coordinate Reference System (CRS).
 In order to homogenize the works and assure that all the tools work correctly, it is recommended to reproject all the data in the same CRS.</p>
 <div class="section" id="reprojecting-vector-layers">
-<h3>2.4.1. Reprojecting vector layers<a class="headerlink" href="#reprojecting-vector-layers" title="Permalink to this headline">¶</a></h3>
+<h3>2.4.1. <span class="target" id="index-2"></span>Reprojecting vector layers<a class="headerlink" href="#reprojecting-vector-layers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>This tool is available at <em>Vector-&gt;Data management tools-&gt;Reproject layer</em>. It provides a function that reprojects a vector layer, creating a new
 layer with the same features as the input one, but with geometries reprojected to a new CRS.
@@ -342,13 +357,13 @@ recent ones in the dropdown menu or click the icon to choose between all the ava
 <li><em>Reprojected</em>: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
 </ul>
 <div class="figure" id="id5">
-<a class="reference internal image-reference" href="../_images/2.4.1_reproject_layer.PNG"><img alt="../_images/2.4.1_reproject_layer.PNG" src="../_images/2.4.1_reproject_layer.PNG" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.4.1_reproject_layer.PNG"><img alt="../_images/2.4.1_reproject_layer.PNG" src="../_images/2.4.1_reproject_layer.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.4.1.1 </span><span class="caption-text">Reproject layer function window</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="reprojecting-raster-layers">
-<h3>2.4.2. Reprojecting raster layers<a class="headerlink" href="#reprojecting-raster-layers" title="Permalink to this headline">¶</a></h3>
+<h3>2.4.2. <span class="target" id="index-3"></span>Reprojecting raster layers<a class="headerlink" href="#reprojecting-raster-layers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Available at <em>Raster-&gt;Projections-&gt;Warp (reproject)</em>, it provides a function that reprojects a raster layer. The tool requires as input:</p>
 <ul class="simple">
@@ -359,16 +374,14 @@ all the available ones. Our choice will be <span class="guilabel">EPSG:32652 - W
 <li><em>Reprojected</em>:  the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
 </ul>
 <div class="figure" id="id6">
-<a class="reference internal image-reference" href="../_images/2.4.2_reproject_raster.PNG"><img alt="../_images/2.4.2_reproject_raster.PNG" src="../_images/2.4.2_reproject_raster.PNG" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.4.2_reproject_raster.PNG"><img alt="../_images/2.4.2_reproject_raster.PNG" src="../_images/2.4.2_reproject_raster.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.4.2.1 </span><span class="caption-text">Reproject raster function window</span></p>
 </div>
 </div></blockquote>
 <p>In order to continue with the tutorial please reproject all the imported vector and raster layers following the examples above.
 Once all the layers are reprojected we need to check if the CRS of the project is the same as the data: to do so, click on the
-CRS setting button</p>
-<img alt="../_images/2.4.2_reproject_map.png" src="../_images/2.4.2_reproject_map.png" />
-<p>in the bottom right of the window and select also here
-<span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span>.</p>
+CRS setting button in the bottom right of the window and select also here <span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span>.</p>
+<a class="reference internal image-reference" href="../_images/2.4.2_reproject_map.png"><img alt="../_images/2.4.2_reproject_map.png" src="../_images/2.4.2_reproject_map.png" style="width: 100%;" /></a>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In this exercise we will refer to the new reprojected layers as <code class="file docutils literal notranslate"><em><span class="pre">originalname</span></em><span class="pre">_rep</span></code>.
@@ -378,7 +391,7 @@ You can create your new layers with the same name in order to be consistent with
 <p class="first admonition-title">Note</p>
 <p>After reprojecting all the layers be sure to delete the original layers. You can do this
 by simply selecting the layers you want to delete in the Layer panel and then click on the Remove layer/Group button.</p>
-<a class="last reference internal image-reference" href="../_images/2.4.2_remove_layers.PNG"><img alt="../_images/2.4.2_remove_layers.PNG" src="../_images/2.4.2_remove_layers.PNG" style="width: 200px;" /></a>
+<a class="last reference internal image-reference" href="../_images/2.4.2_remove_layers.PNG"><img alt="../_images/2.4.2_remove_layers.PNG" src="../_images/2.4.2_remove_layers.PNG" style="width: 250px;" /></a>
 </div>
 </div>
 </div>
@@ -387,7 +400,7 @@ by simply selecting the layers you want to delete in the Layer panel and then cl
 <p>Often the data provided is in a wider area than the one needed, so we can define an area of interest and clip all the layers to that same area;
 in this way we shorten computational times and also provide consistency to the data.</p>
 <div class="section" id="create-the-working-area">
-<h3>2.5.1. Create the working area<a class="headerlink" href="#create-the-working-area" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.1. <span class="target" id="index-4"></span>Create the working area<a class="headerlink" href="#create-the-working-area" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>We will create a vector polygon layer, in the shape of a rectangle, that will represent the area we are considering in this tutorial.
 In order to do so:</p>
@@ -403,7 +416,7 @@ In order to do so:</p>
 <li><em>Geometry type</em>: Polygon</li>
 <li>The CRS should be by default set to the one of the maps but check it to be <span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span></li>
 </ul>
-<img alt="../_images/2.5.1_area_of_interest.PNG" src="../_images/2.5.1_area_of_interest.PNG" />
+<a class="reference internal image-reference" href="../_images/2.5.1_area_of_interest.PNG"><img alt="../_images/2.5.1_area_of_interest.PNG" src="../_images/2.5.1_area_of_interest.PNG" style="width: 800px;" /></a>
 </div></blockquote>
 </li>
 <li><p class="first">Click “Ok”</p>
@@ -423,7 +436,7 @@ and enable the “Shape digitizing toolbar”. This way we can add a perfect rec
 <li>Draw a rectangle in the area around Seoul by left-clicking to start drawing from an angle and then right-clicking
 when the size is the desired one (not too big but big enough to contain some of the natural points, see the picture below)</li>
 </ul>
-<img alt="../_images/2.5.1_aoi.PNG" src="../_images/2.5.1_aoi.PNG" />
+<a class="reference internal image-reference" href="../_images/2.5.1_aoi.PNG"><img alt="../_images/2.5.1_aoi.PNG" src="../_images/2.5.1_aoi.PNG" style="width: 100%;" /></a>
 <ul class="simple">
 <li>Click on “Save layer edits” and toggle editing off</li>
 </ul>
@@ -432,7 +445,7 @@ when the size is the desired one (not too big but big enough to contain some of 
 </div></blockquote>
 </div>
 <div class="section" id="clipping-vector-layers">
-<h3>2.5.2. Clipping vector layers<a class="headerlink" href="#clipping-vector-layers" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.2. <span class="target" id="index-5"></span>Clipping vector layers<a class="headerlink" href="#clipping-vector-layers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Available at <em>Vector-&gt;Geoprocessing tools-&gt;Clip</em>. It provides an algorithm that clips a vector layer using the features of another polygon layer.
 Only the parts of the features in the Input layer that fall within the polygons of the Overlay layer will be added to the resulting layer.
@@ -446,14 +459,14 @@ the vector layer if there are any</li>
 <li><em>Clipped</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
 </ul>
 <div class="figure" id="id7">
-<img alt="../_images/2.5.2_clip_vector.PNG" src="../_images/2.5.2_clip_vector.PNG" />
+<a class="reference internal image-reference" href="../_images/2.5.2_clip_vector.PNG"><img alt="../_images/2.5.2_clip_vector.PNG" src="../_images/2.5.2_clip_vector.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.5.2.1 </span><span class="caption-text">Clip vector function layer</span></p>
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="clipping-raster-layers">
-<h3>2.5.3. Clipping raster layers<a class="headerlink" href="#clipping-raster-layers" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.3. <span class="target" id="index-6"></span>Clipping raster layers<a class="headerlink" href="#clipping-raster-layers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>Available at <em>Raster-&gt;Extraction-&gt;Clip raster by mask layer</em>, it provides an algorithm that clips a raster layer using a vector layer as a mask.
 The input parameters are:</p>
@@ -464,7 +477,7 @@ The input parameters are:</p>
 <li><em>Clipped (extent)</em>: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
 </ul>
 <div class="figure" id="id8">
-<img alt="../_images/2.5.3_clip_raster.PNG" src="../_images/2.5.3_clip_raster.PNG" />
+<a class="reference internal image-reference" href="../_images/2.5.3_clip_raster.PNG"><img alt="../_images/2.5.3_clip_raster.PNG" src="../_images/2.5.3_clip_raster.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.5.3.1 </span><span class="caption-text">Clip raster by mask layer function window</span></p>
 </div>
 </div></blockquote>

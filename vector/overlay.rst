@@ -79,7 +79,7 @@ Overlay operations
 
     + Right-click on the :file:`landuse_dissolved` layer on the Layers panel
     + Open its Attribute table
-    + Manually select the features having these classes by holding Ctrl and clicking on the row number on the left
+    + Manually select the features having these classes by holding :kbd:`Ctrl` and clicking on the row number on the left
 
         - heath
         - forest

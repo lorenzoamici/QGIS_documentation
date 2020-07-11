@@ -1,5 +1,5 @@
-Merge raster
-============
+:index:`Merge raster <single: Merge raster>`
+============================================
 
 We see now how to  Merge multiple raster layers. We do it by combining the Landsat8 imagery bands with the aim of creating a multi-band raster. 
 To do so, we have to first add the raster bands into our QGIS project. From the the Browser panel, navigate to the raster data folder and into 

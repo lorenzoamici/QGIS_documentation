@@ -96,11 +96,16 @@ pdf_documents = [('index', u'rst2pdf', u'QGIS UN doc', u'Lorenzo Amici'),]
 # html_theme = 'default'
 html_theme = 'sphinx_rtd_theme'
 
+html_logo = '/home/yedi/Desktop/Sphinx/img/1200px-QGIS_logo,_2017.svg.png'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'logo_only': False,
+    'style_external_links': True
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
