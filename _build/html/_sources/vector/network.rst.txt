@@ -1,8 +1,8 @@
 Network analysis
 ================
 
-Shortest path
-#############
+:index:`Shortest path <single: Shortest path>`
+##############################################
 
     In order to find the shortest or fastest path in QGIS, we can use the Shortest path function. Having a layer representing a network, we can 
     calculate the shortest path between two chosen points on the map (point to point), from a point layer to a chosen end point (layer to point) 
@@ -28,8 +28,8 @@ Shortest path
     .. image:: ../img/3.5.1_shortest_path_result.PNG
         :width: 100%
 
-Generate service area
-#####################
+:index:`Generate service area <single: Generate service area>`
+##############################################################
 
     In QGIS, we can also generate a service area using the Service Area function. To perform such, you can search for Service area in the Processing 
     toolbox searchbar and select *Service area (from point)*. This function allows creating a vector with all the edges or parts of edges of a network 

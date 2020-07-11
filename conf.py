@@ -34,6 +34,7 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     "sphinx_rtd_theme",
+    "rst2pdf.pdfbuilder",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -67,7 +68,7 @@ release = ''
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -80,6 +81,12 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
+numfig = True
+
+numfig_secnum_depth = 3
+
+# -- Options for PDF output -----------------------------------------------
+pdf_documents = [('index', u'rst2pdf', u'QGIS UN doc', u'Lorenzo Amici'),]
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -117,6 +124,8 @@ html_sidebars = {
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'QGIS_documentationdoc'
+
+# html_title = 'QGIS-UN'
 
 
 # -- Options for LaTeX output ---------------------------------------------

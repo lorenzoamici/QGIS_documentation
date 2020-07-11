@@ -1,5 +1,5 @@
-Kernel density
-==============
+:index:`Kernel density <single: Kernel density>`
+================================================
 
 A useful tool to visualize the density of a point layer it is the Heatmap. In QGIS, we can directly use a styling option of the layer.
 

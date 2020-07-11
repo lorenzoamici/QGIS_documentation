@@ -6,31 +6,98 @@ In this section we will show all the necessary setup steps in order to follow al
 Install QGIS
 ###############
 
-Download QGIS 3.14 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe>`_. 
-Other versions are available in the `QGIS Download page <https://qgis.org/en/site/forusers/download.html>`_.
+    Download QGIS 3.14 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe>`_. 
+    Other versions are available in the `QGIS Download page <https://qgis.org/en/site/forusers/download.html>`_.
 
-.. note:: After downloading QGIS, you will have various option to launch the program, as you see in this image:
+    .. note:: After downloading QGIS, you will have various option to launch the program, as you see in this image:
 
-    .. image:: ../img/2.1_QGIS_programs.png
-        :width: 100px
+        .. image:: ../img/2.1_QGIS_programs.png
+            :width: 100px
 
-    In order to complete this exercise be sure to launch the one with GRASS since we will need some 
-    functionalities that are only available using the tools that GRASS offers.
+        In order to complete this exercise be sure to launch the one with GRASS since we will need some 
+        functionalities that are only available using the tools that GRASS offers.
 
 Download the data
-####################
+#################
+
+    ::
+
+        Data
+        ├── RASTER
+        │   ├── Landsat8_20160519_20170324_01_T1
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_ANG.txt
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B10.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B11.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B1.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B2.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B3.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B4.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B5.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B6.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B7.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B8.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_B9.TIF
+        │   │   ├── LC08_L1TP_116034_20160519_20170324_01_T1_BQA.TIF
+        │   │   └── LC08_L1TP_116034_20160519_20170324_01_T1_MTL.txt
+        │   └── Seoul_DTM.tif
+        └── VECTOR
+            └── south-korea-latest-free.shp
+                ├── buildings_a.cpg
+                ├── buildings_a.dbf
+                ├── buildings_a.prj
+                ├── buildings_a.shp
+                ├── buildings_a.shx
+                ├── landuse_a.cpg
+                ├── landuse_a.dbf
+                ├── landuse_a.prj
+                ├── landuse_a.shp
+                ├── landuse_a.shx
+                ├── natural.cpg
+                ├── natural.dbf
+                ├── natural.prj
+                ├── natural.shp
+                ├── natural.shx
+                ├── places.cpg
+                ├── places.dbf
+                ├── places.prj
+                ├── places.shp
+                ├── places.shx
+                ├── pofw_a.cpg
+                ├── pofw_a.dbf
+                ├── pofw_a.prj
+                ├── pofw_a.shp
+                ├── pofw_a.shx
+                ├── pois_a.cpg
+                ├── pois_a.dbf
+                ├── pois_a.prj
+                ├── pois_a.shp
+                ├── pois_a.shx
+                ├── README
+                ├── roads.cpg
+                ├── roads.dbf
+                ├── roads.prj
+                ├── roads.shp
+                ├── roads.shx
+                ├── water_a.cpg
+                ├── water_a.dbf
+                ├── water_a.prj
+                ├── water_a.shp
+                └── water_a.shx
+
 
 Create a new project
 ####################
 
-Before starting with the analysis of the data, we have to set up a new Project. To do so, run QGIS with GRASS and click on *New Project* 
-(or press :kbd:`Ctrl+N`).
+    Before starting with the analysis of the data, we have to set up a new Project. To do so, run QGIS with GRASS and click on *New Project* 
+    (or press :kbd:`Ctrl+N`).
 
-.. figure:: ../img/2.3_new_project.PNG
+    .. figure:: ../img/2.3_new_project.PNG
 
-    Create a new project
+        Create a new project
 
-#. **Import vector data**
+Import vector data
+------------------
+
     To import vector data, go to *Layer->Add layer->Add vector layer* or use the Browser panel (usually placed above the Layer Panel on 
     the left side of the screen; if not, you can enable it by clicking *View->Panels* and tick “Browser panel”). In the Browser, you can 
     search the data folder and simply drag and drop the files in the map.
@@ -56,13 +123,17 @@ Before starting with the analysis of the data, we have to set up a new Project. 
     + :file:`roads.shp`
     + :file:`water_a.shp`
 
-#. **Import raster data**
+Import raster data
+------------------
+
     To import raster data, you can go to *Layer->Add layer->Add raster layer* or drag and drop them from the Browser panel.
     For this exercise, you can add the following data:
 
     + :file:`Seoul_DTM.tif`
 
-#. **Layers panel**
+Layers panel
+------------
+
     The Layers panel is a useful way to keep track of all the layers currently loaded in our Project. It’s usually placed 
     below the Browser panel, but if you don’t have it activated you can do so by clicking on *View->Panels* and tick “Layers”.
 
@@ -99,7 +170,9 @@ Manipulate CRS of the project and the data
 The data we use in our geo-analyses often come from different sources, and therefore also have a different Coordinate Reference System (CRS). 
 In order to homogenize the works and assure that all the tools work correctly, it is recommended to reproject all the data in the same CRS.
 
-#. **Reprojecting vector layers**
+Reprojecting vector layers
+--------------------------
+
     This tool is available at *Vector->Data management tools->Reproject layer*. It provides a function that reprojects a vector layer, creating a new 
     layer with the same features as the input one, but with geometries reprojected to a new CRS. 
     The required input parameters are:
@@ -115,7 +188,9 @@ In order to homogenize the works and assure that all the tools work correctly, i
 
         Reproject layer function window
 
-#. **Reprojecting raster layers**
+Reprojecting raster layers
+--------------------------
+
     Available at *Raster->Projections->Warp (reproject)*, it provides a function that reprojects a raster layer. The tool requires as input:
     
     + *Input layer*: the raster layer to be reprojected (in the example the *Seoul_DTM*)
@@ -153,7 +228,8 @@ Clip all the data to the study area
 Often the data provided is in a wider area than the one needed, so we can define an area of interest and clip all the layers to that same area; 
 in this way we shorten computational times and also provide consistency to the data.
 
-#. **Create the working area**
+Create the working area
+-----------------------
 
     We will create a vector polygon layer, in the shape of a rectangle, that will represent the area we are considering in this tutorial. 
     In order to do so: 
@@ -190,7 +266,8 @@ in this way we shorten computational times and also provide consistency to the d
 
     Now that you have your working area layer we can clip all our layers to it.
 
-#. **Clipping vector layer**
+Clipping vector layers
+----------------------
 
     Available at *Vector->Geoprocessing tools->Clip*. It provides an algorithm that clips a vector layer using the features of another polygon layer. 
     Only the parts of the features in the Input layer that fall within the polygons of the Overlay layer will be added to the resulting layer. 
@@ -206,7 +283,8 @@ in this way we shorten computational times and also provide consistency to the d
 
             Clip vector function layer
 
-#. **Clipping raster layer**
+Clipping raster layers
+----------------------
 
     Available at *Raster->Extraction->Clip raster by mask layer*, it provides an algorithm that clips a raster layer using a vector layer as a mask. 
     The input parameters are:

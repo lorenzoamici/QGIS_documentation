@@ -6,42 +6,15 @@
 .. include:: <isonum.txt>
 
 ==============================================
-Welcome to QGIS documentation!
+QGIS 3.10 - Geo-analysis Practice
 ==============================================
 
-Title
-=====
+This educational material is developed by Dr. Lorenzo Amici, Dr. Daniele Oxoli,  Prof. Maria A. Brovelli of Politecnico di Milano 
+in support of XXXX.
 
-Subtitle
-########
-`<https://docs.qgis.org/3.10/en/docs/index.html>`_
-
-`QGIS <https://docs.qgis.org/3.10/en/docs/index.html>`_
-
-Sub subtitle
-************
-:guilabel:`Processing Toolbox`
-
-:file:`excercise data`
-
-.. image:: img/1200px-QGIS_logo,_2017.svg.png
-	:width: 200px
-	:align: center
-
-.. figure:: img/1200px-QGIS_logo,_2017.svg.png
-	:width: 200px
-	:align: center
-
-	QGIS logo
-
-.. seealso:: This is a simple **seealso** note |rarr|.
-
-.. note::  This is a **note** box.
-
-.. warning:: This is a *warning*.
-
-Sub sub subtitle
-----------------
+Silvia Franceschi and Andrea Antonello (HydroloGIS) with the mentorship of HaeKyong Kang of the Korea Research Institute for Human 
+Settlements and Minpa Lee of MangoSystem, within the project of collaboration between the OSGEO foundation and UN institute under 
+the framework of the UN OSGeo Challenge.
 
 .. toctree::
    :maxdepth: 2
@@ -60,5 +33,4 @@ Indices and tables
 ******************
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

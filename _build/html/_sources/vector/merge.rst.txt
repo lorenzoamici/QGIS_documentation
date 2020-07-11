@@ -1,10 +1,10 @@
-Merge vector layers
-===================
+:index:`Merge vector layers <single: Merge vector>`
+===================================================
 
 Let's now consider the polygons layers: in particular we will need the :file:`buildings`, :file:`landuse_a`, :file:`pois_a`, :file:`pofw_a` 
 and :file:`water_a` layers, so you can hide all the others in the map.
 
-.. image:: ../img/3.2_only_polygons.PNG
+.. figure:: ../img/3.2_only_polygons.PNG
     :width: 100%
 
 The Merge vector layers function, available at *Processing Toolbox->Vector General->Merge vector layers*, provides an algorithm that 

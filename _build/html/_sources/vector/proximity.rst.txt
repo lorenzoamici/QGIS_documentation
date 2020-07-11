@@ -10,8 +10,8 @@ and therefore we see first how to convert the geometry type back to Point.
 
     In the information of the :file:`places` layer we can see that its geometry is MultiPoint
 
-Convert geometry type
-#####################
+:index:`Convert geometry type <single: Convert geometry type>`
+##############################################################
 
     Available at *Processing Toolbox->Vector geometry->Convert geometry type*, it provides an algorithm that allows to convert the 
     MultiPoint features to single Point features. To do so, the input parameters are:
@@ -34,8 +34,8 @@ Convert geometry type
 
     .. note:: After you are done with the conversion, you can remove the previous point layers and include in the project only the new ones.
 
-Average Nearest Neighbor
-########################
+:index:`Average Nearest Neighbor <single: Average Nearest Neighbor>`
+####################################################################
 
     Available at *Processing Toolbox->Vector Analysis->Nearest Neighbour Analysis*, it provides a function that performs nearest neighbor 
     analysis for a point layer. The output is generated as an HTML file with the computed statistics. We perform the Nearest Neighbor Analysis 
@@ -60,8 +60,8 @@ Average Nearest Neighbor
 We now see how to calculate the nearest feature to a given point or set of points in QGIS. We distinguish between distances from point to point, 
 and from point to a line or polygon layer.
 
-Distance from point to point
-############################
+:index:`Distance from point to point <single: Distance from point to point>`
+############################################################################
 
     Available at *Processing toolbox->Vector analysis->Distance to nearest hub (points)*, it provides an algorithm that computes the distance between 
     point features taken as the origin and their closest point destination. In this case, we will calculate the distance from the :file:`places` layer to 
@@ -84,8 +84,8 @@ Distance from point to point
     .. image:: ../img/3.4.3_distance_points_result.PNG
         :width: 600px
 
-Distance from point to layer
-############################
+:index:`Distance from point to layer <single: Distance from point to layer>`
+############################################################################
 
     Available at *Processing Toolbox->Vector analysis->Distance to nearest hub (line to hub)*, it provides an algorithm that computes the distance between 
     point features taken as origin and their closest destination line or polygon feature. 

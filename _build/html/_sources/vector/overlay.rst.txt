@@ -1,8 +1,8 @@
 Overlay operations
 ==================
 
-Union
-#####
+:index:`Union <single: Union>`
+##############################
 
     The Union function, available at *Vector->Geoprocessing->Union*, provides an algorithm that checks overlapping features within 
     an input layer and creates separate features for overlapping and non-overlapping parts. The area of overlap will create as many 
@@ -25,8 +25,8 @@ Union
     .. image:: ../img/3.3.1_union_result.PNG
         :width: 100%
 
-Intersection
-############
+:index:`Intersection <single: Intersection>`
+############################################
 
     We can now look at the Intersection function. It is available at *Vector->Geoprocessing Tools->Intersection*, and it provides a function 
     that extracts the overlapping portions of the features of two layers and assigns these portions the attribute of both layers. 
@@ -46,8 +46,8 @@ Intersection
 
     .. image:: ../img/3.3.2_intersection_result.PNG
 
-Dissolve
-########
+:index:`Dissolve <single: Dissolve>`
+####################################
 
     We will now use the Dissolve function applied to the :file:`landuse_a` layer. The Dissolve function, available at 
     *Vector->Geoprocessing tools->Dissolve*, provides an algorithm that takes a vector layer and combines their features 
@@ -68,8 +68,8 @@ Dissolve
 
     .. image:: ../img/3.3.3_dissolved_result.PNG
 
-Difference
-##########
+:index:`Difference <single: Difference>`
+########################################
 
     We can now use the newly created :file:`landuse_dissolved` layer to perform a Difference operation. Difference is a function available at 
     *Vector->Geoprocessing Tools->Difference*, that extracts features of an Input layer that fall outside features in the Overlay layer 
@@ -106,8 +106,8 @@ Difference
 
     The result will be a landuse layer that only retains the features with industrial and urbanized landuse types.
 
-Symmetrical difference
-######################
+:index:`Symmetrical difference <single: Symmetrical difference>`
+################################################################
 
     The Symmetrical difference, available at *Vector->Geoprocessing Tools->Symmetrical Difference*, provides a function that extracts 
     the portions of features from both the Input and Overlay layers that do not overlap. The attribute table of the Symmetrical Difference 
@@ -139,8 +139,8 @@ Symmetrical difference
 
     .. image:: ../img/3.3.5_symmetrical_difference_result.PNG
 
-Spatial join
-############
+:index:`Spatial join <single: Spatial join>`
+############################################
 
     As you see with the intersection function we can find the buildings that are also religious places. We will now use the 
     Join Attributes by Location function (generally known as Spatial Join) available at *Vector->Data Management Tools->Join Attributes by Location*, 
