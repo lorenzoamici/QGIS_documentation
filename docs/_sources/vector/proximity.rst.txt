@@ -3,12 +3,12 @@ Proximity analysis
 
 We will now focus on operations involving point layers. Please note that QGIS, when clipping a Point layer, also converts 
 its geometry type to MultiPoint. This geometry type is not suitable for some of the functions we will use in the next step 
-and therefore we see first how to convert the geometry type back to Point.
+and therefore we will first see how to convert the geometry type back to Point.
 
 .. figure:: ../img/3.4_MultiPoint.PNG
     :width: 800px
 
-    In the information of the :file:`places` layer we can see that its geometry is MultiPoint
+    In the information of the :file:`places_clip` layer we can see that its geometry is MultiPoint
 
 :index:`Convert geometry type <single: Convert geometry type>`
 ##############################################################
@@ -16,7 +16,7 @@ and therefore we see first how to convert the geometry type back to Point.
     Available at *Processing Toolbox->Vector geometry->Convert geometry type*, it provides an algorithm that allows to convert the 
     MultiPoint features to single Point features. To do so, the input parameters are:
 
-    + *Input layer*: the point layer whose geometry we want to convert. In this example we use the :file:`places` layer
+    + *Input layer*: the point layer whose geometry we want to convert. In this example we use the :file:`places_clip` layer
     + *New geometry type*: select Centroids
     + *Converted*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
@@ -28,9 +28,9 @@ and therefore we see first how to convert the geometry type back to Point.
     .. figure:: ../img/3.4.1_Point.PNG
         :width: 800px
 
-        Now the :file:`places` layer's geometry is MultiPoint
+        Now the :file:`places_clip` layer's geometry is MultiPoint
 
-    In order to continue with the following functions, please convert the geometry type also for the :file:`natural` point layer.
+    In order to continue with the following functions, please convert the geometry type also for the :file:`natural_clip` point layer.
 
     .. note:: After you are done with the conversion, you can remove the previous point layers and include in the project only the new ones.
 
@@ -39,9 +39,9 @@ and therefore we see first how to convert the geometry type back to Point.
 
     Available at *Processing Toolbox->Vector Analysis->Nearest Neighbour Analysis*, it provides a function that performs nearest neighbor 
     analysis for a point layer. The output is generated as an HTML file with the computed statistics. We perform the Nearest Neighbor Analysis 
-    with the :file:`natural` point layer; the input parameters are:
+    with the :file:`natural_clip_point` point layer; the input parameters are:
 
-    + *Input layer*: the :file:`natural` layer
+    + *Input layer*: the :file:`natural_clip_point` layer
     + *Nearest Neighbor*: the path and the name of the output HTML file. Note that if left empty a temporary file will be created
 
     .. figure:: ../img/3.4.2_nearest_neighbor.PNG
@@ -55,7 +55,7 @@ and therefore we see first how to convert the geometry type back to Point.
     .. figure:: ../img/3.4.2_nearest_neighbor_result.PNG
         :width: 800px
 
-        The html result when opened in the browser
+        The HTML result when opened in the browser
 
 We now see how to calculate the nearest feature to a given point or set of points in QGIS. We distinguish between distances from point to point, 
 and from point to a line or polygon layer.
@@ -64,11 +64,11 @@ and from point to a line or polygon layer.
 ############################################################################
 
     Available at *Processing toolbox->Vector analysis->Distance to nearest hub (points)*, it provides an algorithm that computes the distance between 
-    point features taken as the origin and their closest point destination. In this case, we will calculate the distance from the :file:`places` layer to 
-    the :file:`natural` layer. The input parameters are:
+    point features taken as the origin and their closest point destination. In this case, we will calculate the distance from the 
+    :file:`places_clip_point` layer to the :file:`natural_clip_point` layer. The input parameters are:
 
-    + *Source points layer*: the :file:`places` shapefile
-    + *Destination hubs layer*: the :file:`natural` shapefile
+    + *Source points layer*: the :file:`places_clip_point` shapefile
+    + *Destination hubs layer*: the :file:`natural_clip_point` shapefile
     + *Hub layer name attribute*: osm_id
     + *Measurement units*: meters
     + *Hub distance*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
@@ -78,8 +78,8 @@ and from point to a line or polygon layer.
 
         Distance from point to point function window
 
-    The result is a copy of the places layer, but each point feature has two additional attributes: the id of the nearest natural point feature, 
-    and the distance from it, as you can see from its attribute table:
+    The result is a copy of the places layer, but each point feature has two additional attributes: the id of the nearest natural point feature
+    (HubName) and the distance from it (HubDist), as you can see from its attribute table:
 
     .. image:: ../img/3.4.3_distance_points_result.PNG
         :width: 600px
@@ -92,19 +92,20 @@ and from point to a line or polygon layer.
 
     .. note:: Distance calculations are based on the centroid of the line or polygon features.
 
-    In this case, we calculate the closest forest to each place. To do so, we select all the forests from the :file:`landuse_a` layer:
+    In this case, we calculate the closest forest to each place. To do so, we select all the forests from the :file:`landuse_a_clip` layer:
 
-    + Right-click on the :file:`landuse_a` layer in the Layers panel and click on Open attribute table
+    + Right-click on the :file:`landuse_a_clip` layer in the Layers panel and click on Open attribute table
     + Click on the Select features using an expression button
     + In the window, write the following expression: ``"fclass" is 'forest'``, and then click “Select features”
 
     .. image:: ../img/3.4.4_select_expression.PNG
         :width: 800px
 
-    Once we have selected all the forests from the landuse layer, we can run the Distance to nearest hub (line to hub) function. The input parameters are:
+    Once we have selected all the forests from the :file:`landuse_clip` layer, we can run the Distance to nearest hub (line to hub) function. 
+    The input parameters are:
 
-    + *Source points layer*: the :file:`places` layer
-    + *Destination hubs layer*: the :file:`landuse_a` layer, considering only selected features
+    + *Source points layer*: the :file:`places_clip_point` layer
+    + *Destination hubs layer*: the :file:`landuse_a_clip` layer, considering only selected features
     + *Hub layer name attribute*: osm_id
     + *Measurement units*: meters
     + *Hub distance*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created

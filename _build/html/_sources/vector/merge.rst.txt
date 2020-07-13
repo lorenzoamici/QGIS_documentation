@@ -1,8 +1,8 @@
 :index:`Merge vector layers <single: Merge vector>`
 ===================================================
 
-Let's now consider the polygons layers: in particular we will need the :file:`buildings`, :file:`landuse_a`, :file:`pois_a`, :file:`pofw_a` 
-and :file:`water_a` layers, so you can hide all the others in the map.
+Let's now consider the polygons layers: in particular we will need the :file:`buildings_clip`, :file:`landuse_a_clip`, 
+:file:`pois_a_clip`, :file:`pofw_a_clip` and :file:`water_a_clip` layers, so you can hide all the others in the map.
 
 .. figure:: ../img/3.2_only_polygons.PNG
     :width: 100%
@@ -10,11 +10,11 @@ and :file:`water_a` layers, so you can hide all the others in the map.
 The Merge vector layers function, available at *Processing Toolbox->Vector General->Merge vector layers*, provides an algorithm that 
 combines multiple vector layers of the same geometry type into a single one. If the attributes tables are different, the attribute 
 table of the resulting layer will contain the attributes from all input layers. New attributes will be added for the original layer 
-name and source. We will use it to combine the :file:`landuse_a` and the :file:`water_a` in order to get a general layer describing both 
+name and source. We will use it to combine the :file:`landuse_a_clip` and the :file:`water_a_clip` in order to get a general layer describing both 
 land and water features. To do so, the input parameters are:
 
-+ *Input layers*: click on the icon on the left and select :file:`landuse_a` and :file:`water_a`
-+ *Destination CRS*: select the Project CRS, that should be :guilabel:`EPSG:32652 - WGS84 / UTM zone 52N`
++ *Input layers*: click on the icon on the left and select :file:`landuse_a_clip` and :file:`water_a_clip`
++ *Destination CRS*: select the Project CRS, that is :guilabel:`EPSG:32652 - WGS84 / UTM zone 52N`
 + *Merged*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
 .. figure:: ../img/3.2_merge.PNG

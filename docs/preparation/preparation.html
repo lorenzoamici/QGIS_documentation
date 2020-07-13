@@ -39,8 +39,8 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Vector operations" href="../vector/vector.html" />
     <link rel="prev" title="1. General Info" href="../introduction/general.html" />
-    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
-
+        <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.1
+                1.0
               </div>
             
           
@@ -87,6 +87,7 @@
         
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+        
             
             
               
@@ -94,14 +95,79 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Preparation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vector/vector.html">3. Vector operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raster/raster.html">4. Raster operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#purpose-of-this-documentation">1.1. Purpose of this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#target-audience">1.2. Target audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#license">1.3. License</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Preparation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-qgis">2.1. Install QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-the-data">2.2. Download the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-project">2.3. Create a new project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#import-vector-data">2.3.1. Import vector data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-raster-data">2.3.2. Import raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layers-panel">2.3.3. Layers panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manipulate-crs-of-the-project-and-the-data">2.4. Manipulate CRS of the project and the data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reprojecting-vector-layers">2.4.1. Reprojecting vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reprojecting-raster-layers">2.4.2. Reprojecting raster layers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#clip-all-the-data-to-the-study-area">2.5. Clip all the data to the study area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-working-area">2.5.1. Create the working area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clipping-vector-layers">2.5.2. Clipping vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clipping-raster-layers">2.5.3. Clipping raster layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vector/vector.html">3. Vector operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vector/buffer.html">3.1. Buffer operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vector/buffer.html#single-buffer">3.1.1. Single buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/buffer.html#multi-ring-buffer">3.1.2. Multi-ring buffer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vector/merge.html">3.2. Merge vector layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector/overlay.html">3.3. Overlay operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vector/overlay.html#union">3.3.1. Union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/overlay.html#intersection">3.3.2. Intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/overlay.html#dissolve">3.3.3. Dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/overlay.html#difference">3.3.4. Difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/overlay.html#symmetrical-difference">3.3.5. Symmetrical difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/overlay.html#spatial-join">3.3.6. Spatial join</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vector/proximity.html">3.4. Proximity analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vector/proximity.html#convert-geometry-type">3.4.1. Convert geometry type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/proximity.html#average-nearest-neighbor">3.4.2. Average Nearest Neighbor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/proximity.html#distance-from-point-to-point">3.4.3. Distance from point to point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/proximity.html#distance-from-point-to-layer">3.4.4. Distance from point to layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vector/network.html">3.5. Network analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vector/network.html#shortest-path">3.5.1. Shortest path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/network.html#generate-service-area">3.5.2. Generate service area</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vector/kernel.html">3.6. Kernel density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector/idw.html">3.7. Inverse Distance Weighting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../raster/raster.html">4. Raster operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raster/merge.html">4.1. Merge raster</a></li>
+</ul>
+</li>
 </ul>
 
             
           
+        <p class="caption">
+            <span class="caption-text">Functions:</span>
+        </p>
+        <a href="genindex.html">Index</a>
+    
         </div>
         
       </div>
@@ -350,7 +416,7 @@ In order to homogenize the works and assure that all the tools work correctly, i
 layer with the same features as the input one, but with geometries reprojected to a new CRS.
 The required input parameters are:</p>
 <ul class="simple">
-<li><em>Input layer</em>: the vector layer to be reprojected (in the example <em>buildings_a</em>)</li>
+<li><em>Input layer</em>: the vector layer to be reprojected (in the example :file`buildings_a`)</li>
 <li><em>Target CRS</em>: the target Coordinate Reference System. You can choose from the
 recent ones in the dropdown menu or click the icon to choose between all the available ones. Our choice will be
 <span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span></li>
@@ -367,7 +433,7 @@ recent ones in the dropdown menu or click the icon to choose between all the ava
 <blockquote>
 <div><p>Available at <em>Raster-&gt;Projections-&gt;Warp (reproject)</em>, it provides a function that reprojects a raster layer. The tool requires as input:</p>
 <ul class="simple">
-<li><em>Input layer</em>: the raster layer to be reprojected (in the example the <em>Seoul_DTM</em>)</li>
+<li><em>Input layer</em>: the raster layer to be reprojected (in the example the <code class="file docutils literal notranslate"><span class="pre">Seoul_DTM</span></code>)</li>
 <li><em>Target CRS</em>: the target Coordinate Reference System. You can choose from the recent ones in the dropdown menu or click the icon to choose between
 all the available ones. Our choice will be <span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span></li>
 <li><em>Resampling method to use</em>: the method to be used for resampling the data, we will use the <em>Nearest Neighbor</em></li>
@@ -384,7 +450,7 @@ CRS setting button in the bottom right of the window and select also here <span 
 <a class="reference internal image-reference" href="../_images/2.4.2_reproject_map.png"><img alt="../_images/2.4.2_reproject_map.png" src="../_images/2.4.2_reproject_map.png" style="width: 100%;" /></a>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">In this exercise we will refer to the new reprojected layers as <code class="file docutils literal notranslate"><em><span class="pre">originalname</span></em><span class="pre">_rep</span></code>.
+<p class="last">In this exercise we will refer to the reprojected layers as <code class="file docutils literal notranslate"><em><span class="pre">originalname</span></em><span class="pre">_rep</span></code>.
 You can create your new layers with the same name in order to be consistent with the naming.</p>
 </div>
 <div class="admonition note">
@@ -426,17 +492,23 @@ In order to do so:</p>
 <p>Once you created the layer, you need to add the polygon representing the working area:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Right click on area_of_interest in the Layer panel and select “Toggle editing”</li>
+<li>Right click on <code class="file docutils literal notranslate"><span class="pre">area_of_interest</span></code> in the Layers panel and select “Toggle editing”</li>
 <li>Right-click anywhere on the top toolbar (or go to <em>View-&gt;Toolbars</em> and add it from there)
 and enable the “Shape digitizing toolbar”. This way we can add a perfect rectangle polygon to our shapefile</li>
 <li>Click on “Add rectangle from extent”</li>
 </ul>
 <img alt="../_images/2.5.1_add_rectangle.PNG" src="../_images/2.5.1_add_rectangle.PNG" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <ul class="simple">
 <li>Draw a rectangle in the area around Seoul by left-clicking to start drawing from an angle and then right-clicking
-when the size is the desired one (not too big but big enough to contain some of the natural points, see the picture below)</li>
+when the size is the desired one (not too big, take the picture below as reference)</li>
 </ul>
 <a class="reference internal image-reference" href="../_images/2.5.1_aoi.PNG"><img alt="../_images/2.5.1_aoi.PNG" src="../_images/2.5.1_aoi.PNG" style="width: 100%;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <ul class="simple">
 <li>Click on “Save layer edits” and toggle editing off</li>
 </ul>
@@ -485,7 +557,7 @@ The input parameters are:</p>
 <p>In order to continue with the tutorial please clip all the vector and the DTM raster layer following the examples above.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">In this exercise we will refer to the new clipped layers as <code class="file docutils literal notranslate"><em><span class="pre">originalname</span></em><span class="pre">_clip</span></code>. You can create your
+<p class="last">In this exercise we will refer to the clipped layers as <code class="file docutils literal notranslate"><em><span class="pre">originalname</span></em><span class="pre">_clip</span></code>. You can create your
 new layers with the same name in order to be consistent with the naming</p>
 </div>
 <div class="admonition note">

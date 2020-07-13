@@ -38,8 +38,8 @@
     
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
-    <link href="_static/my_theme.css" rel="stylesheet" type="text/css">
-
+        <link href="_static/my_theme.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1
+                1.0
               </div>
             
           
@@ -86,6 +86,7 @@
         
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+        
             
             
               
@@ -93,14 +94,79 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction/general.html">1. General Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preparation/preparation.html">2. Preparation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vector/vector.html">3. Vector operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raster/raster.html">4. Raster operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/general.html">1. General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/general.html#purpose-of-this-documentation">1.1. Purpose of this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/general.html#target-audience">1.2. Target audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/general.html#license">1.3. License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="preparation/preparation.html">2. Preparation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preparation/preparation.html#install-qgis">2.1. Install QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preparation/preparation.html#download-the-data">2.2. Download the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preparation/preparation.html#create-a-new-project">2.3. Create a new project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#import-vector-data">2.3.1. Import vector data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#import-raster-data">2.3.2. Import raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#layers-panel">2.3.3. Layers panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preparation/preparation.html#manipulate-crs-of-the-project-and-the-data">2.4. Manipulate CRS of the project and the data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#reprojecting-vector-layers">2.4.1. Reprojecting vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#reprojecting-raster-layers">2.4.2. Reprojecting raster layers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preparation/preparation.html#clip-all-the-data-to-the-study-area">2.5. Clip all the data to the study area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#create-the-working-area">2.5.1. Create the working area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#clipping-vector-layers">2.5.2. Clipping vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparation/preparation.html#clipping-raster-layers">2.5.3. Clipping raster layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vector/vector.html">3. Vector operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vector/buffer.html">3.1. Buffer operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vector/buffer.html#single-buffer">3.1.1. Single buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/buffer.html#multi-ring-buffer">3.1.2. Multi-ring buffer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vector/merge.html">3.2. Merge vector layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector/overlay.html">3.3. Overlay operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vector/overlay.html#union">3.3.1. Union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/overlay.html#intersection">3.3.2. Intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/overlay.html#dissolve">3.3.3. Dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/overlay.html#difference">3.3.4. Difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/overlay.html#symmetrical-difference">3.3.5. Symmetrical difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/overlay.html#spatial-join">3.3.6. Spatial join</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vector/proximity.html">3.4. Proximity analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vector/proximity.html#convert-geometry-type">3.4.1. Convert geometry type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/proximity.html#average-nearest-neighbor">3.4.2. Average Nearest Neighbor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/proximity.html#distance-from-point-to-point">3.4.3. Distance from point to point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/proximity.html#distance-from-point-to-layer">3.4.4. Distance from point to layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vector/network.html">3.5. Network analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vector/network.html#shortest-path">3.5.1. Shortest path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/network.html#generate-service-area">3.5.2. Generate service area</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vector/kernel.html">3.6. Kernel density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector/idw.html">3.7. Inverse Distance Weighting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="raster/raster.html">4. Raster operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raster/merge.html">4.1. Merge raster</a></li>
+</ul>
+</li>
 </ul>
 
             
           
+        <p class="caption">
+            <span class="caption-text">Functions:</span>
+        </p>
+        <a href="genindex.html">Index</a>
+    
         </div>
         
       </div>

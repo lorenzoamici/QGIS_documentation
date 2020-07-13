@@ -17,10 +17,9 @@ Settlements and Minpa Lee of MangoSystem, within the project of collaboration be
 the framework of the `UN OSGeo Challenge <https://www.osgeo.org/foundation-news/osgeo-un-committee-educational-challenge/>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
    :glob:
-   :titlesonly:
    :numbered:
 
    introduction/general
@@ -29,8 +28,7 @@ the framework of the `UN OSGeo Challenge <https://www.osgeo.org/foundation-news/
    raster/raster
 
 
-Indices and tables
-******************
+Index
+*****
 
 * :ref:`genindex`
-* :ref:`search`

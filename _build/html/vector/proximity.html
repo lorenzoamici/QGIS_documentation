@@ -39,8 +39,8 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.5. Network analysis" href="network.html" />
     <link rel="prev" title="3.3. Overlay operations" href="overlay.html" />
-    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
-
+        <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.1
+                1.0
               </div>
             
           
@@ -87,6 +87,7 @@
         
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+        
             
             
               
@@ -94,23 +95,79 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#purpose-of-this-documentation">1.1. Purpose of this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#target-audience">1.2. Target audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#license">1.3. License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#install-qgis">2.1. Install QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#download-the-data">2.2. Download the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#create-a-new-project">2.3. Create a new project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#import-vector-data">2.3.1. Import vector data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#import-raster-data">2.3.2. Import raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#layers-panel">2.3.3. Layers panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#manipulate-crs-of-the-project-and-the-data">2.4. Manipulate CRS of the project and the data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#reprojecting-vector-layers">2.4.1. Reprojecting vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#reprojecting-raster-layers">2.4.2. Reprojecting raster layers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#clip-all-the-data-to-the-study-area">2.5. Clip all the data to the study area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#create-the-working-area">2.5.1. Create the working area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#clipping-vector-layers">2.5.2. Clipping vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#clipping-raster-layers">2.5.3. Clipping raster layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="vector.html">3. Vector operations</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buffer.html#single-buffer">3.1.1. Single buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.html#multi-ring-buffer">3.1.2. Multi-ring buffer</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="merge.html">3.2. Merge vector layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overlay.html">3.3. Overlay operations</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. Proximity analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="network.html">3.5. Network analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay.html">3.3. Overlay operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#union">3.3.1. Union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#intersection">3.3.2. Intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#dissolve">3.3.3. Dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#difference">3.3.4. Difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#symmetrical-difference">3.3.5. Symmetrical difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#spatial-join">3.3.6. Spatial join</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. Proximity analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#convert-geometry-type">3.4.1. Convert geometry type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#average-nearest-neighbor">3.4.2. Average Nearest Neighbor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distance-from-point-to-point">3.4.3. Distance from point to point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distance-from-point-to-layer">3.4.4. Distance from point to layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">3.5. Network analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="network.html#shortest-path">3.5.1. Shortest path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html#generate-service-area">3.5.2. Generate service area</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="kernel.html">3.6. Kernel density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="idw.html">3.7. Inverse Distance Weighting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../raster/raster.html">4. Raster operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raster/raster.html">4. Raster operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raster/merge.html">4.1. Merge raster</a></li>
+</ul>
+</li>
 </ul>
 
             
           
+        <p class="caption">
+            <span class="caption-text">Functions:</span>
+        </p>
+        <a href="genindex.html">Index</a>
+    
         </div>
         
       </div>
@@ -178,10 +235,10 @@
 <h1>3.4. Proximity analysis<a class="headerlink" href="#proximity-analysis" title="Permalink to this headline">¶</a></h1>
 <p>We will now focus on operations involving point layers. Please note that QGIS, when clipping a Point layer, also converts
 its geometry type to MultiPoint. This geometry type is not suitable for some of the functions we will use in the next step
-and therefore we see first how to convert the geometry type back to Point.</p>
+and therefore we will first see how to convert the geometry type back to Point.</p>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="../_images/3.4_MultiPoint.PNG"><img alt="../_images/3.4_MultiPoint.PNG" src="../_images/3.4_MultiPoint.PNG" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.4.1 </span><span class="caption-text">In the information of the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer we can see that its geometry is MultiPoint</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.4.1 </span><span class="caption-text">In the information of the <code class="file docutils literal notranslate"><span class="pre">places_clip</span></code> layer we can see that its geometry is MultiPoint</span></p>
 </div>
 <div class="section" id="convert-geometry-type">
 <h2>3.4.1. <span class="target" id="index-0"></span>Convert geometry type<a class="headerlink" href="#convert-geometry-type" title="Permalink to this headline">¶</a></h2>
@@ -189,7 +246,7 @@ and therefore we see first how to convert the geometry type back to Point.</p>
 <div><p>Available at <em>Processing Toolbox-&gt;Vector geometry-&gt;Convert geometry type</em>, it provides an algorithm that allows to convert the
 MultiPoint features to single Point features. To do so, the input parameters are:</p>
 <ul class="simple">
-<li><em>Input layer</em>: the point layer whose geometry we want to convert. In this example we use the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer</li>
+<li><em>Input layer</em>: the point layer whose geometry we want to convert. In this example we use the <code class="file docutils literal notranslate"><span class="pre">places_clip</span></code> layer</li>
 <li><em>New geometry type</em>: select Centroids</li>
 <li><em>Converted</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
 </ul>
@@ -199,9 +256,9 @@ MultiPoint features to single Point features. To do so, the input parameters are
 </div>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../_images/3.4.1_Point.PNG"><img alt="../_images/3.4.1_Point.PNG" src="../_images/3.4.1_Point.PNG" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.4.1.2 </span><span class="caption-text">Now the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer’s geometry is MultiPoint</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.4.1.2 </span><span class="caption-text">Now the <code class="file docutils literal notranslate"><span class="pre">places_clip</span></code> layer’s geometry is MultiPoint</span></p>
 </div>
-<p>In order to continue with the following functions, please convert the geometry type also for the <code class="file docutils literal notranslate"><span class="pre">natural</span></code> point layer.</p>
+<p>In order to continue with the following functions, please convert the geometry type also for the <code class="file docutils literal notranslate"><span class="pre">natural_clip</span></code> point layer.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">After you are done with the conversion, you can remove the previous point layers and include in the project only the new ones.</p>
@@ -213,9 +270,9 @@ MultiPoint features to single Point features. To do so, the input parameters are
 <blockquote>
 <div><p>Available at <em>Processing Toolbox-&gt;Vector Analysis-&gt;Nearest Neighbour Analysis</em>, it provides a function that performs nearest neighbor
 analysis for a point layer. The output is generated as an HTML file with the computed statistics. We perform the Nearest Neighbor Analysis
-with the <code class="file docutils literal notranslate"><span class="pre">natural</span></code> point layer; the input parameters are:</p>
+with the <code class="file docutils literal notranslate"><span class="pre">natural_clip_point</span></code> point layer; the input parameters are:</p>
 <ul class="simple">
-<li><em>Input layer</em>: the <code class="file docutils literal notranslate"><span class="pre">natural</span></code> layer</li>
+<li><em>Input layer</em>: the <code class="file docutils literal notranslate"><span class="pre">natural_clip_point</span></code> layer</li>
 <li><em>Nearest Neighbor</em>: the path and the name of the output HTML file. Note that if left empty a temporary file will be created</li>
 </ul>
 <div class="figure" id="id4">
@@ -226,7 +283,7 @@ with the <code class="file docutils literal notranslate"><span class="pre">natur
 Expected mean distance, Nearest neighbour index, Number of points, and Z-Score.</p>
 <div class="figure" id="id5">
 <a class="reference internal image-reference" href="../_images/3.4.2_nearest_neighbor_result.PNG"><img alt="../_images/3.4.2_nearest_neighbor_result.PNG" src="../_images/3.4.2_nearest_neighbor_result.PNG" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.4.2.2 </span><span class="caption-text">The html result when opened in the browser</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.4.2.2 </span><span class="caption-text">The HTML result when opened in the browser</span></p>
 </div>
 </div></blockquote>
 <p>We now see how to calculate the nearest feature to a given point or set of points in QGIS. We distinguish between distances from point to point,
@@ -236,11 +293,11 @@ and from point to a line or polygon layer.</p>
 <h2>3.4.3. <span class="target" id="index-2"></span>Distance from point to point<a class="headerlink" href="#distance-from-point-to-point" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Available at <em>Processing toolbox-&gt;Vector analysis-&gt;Distance to nearest hub (points)</em>, it provides an algorithm that computes the distance between
-point features taken as the origin and their closest point destination. In this case, we will calculate the distance from the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer to
-the <code class="file docutils literal notranslate"><span class="pre">natural</span></code> layer. The input parameters are:</p>
+point features taken as the origin and their closest point destination. In this case, we will calculate the distance from the
+<code class="file docutils literal notranslate"><span class="pre">places_clip_point</span></code> layer to the <code class="file docutils literal notranslate"><span class="pre">natural_clip_point</span></code> layer. The input parameters are:</p>
 <ul class="simple">
-<li><em>Source points layer</em>: the <code class="file docutils literal notranslate"><span class="pre">places</span></code> shapefile</li>
-<li><em>Destination hubs layer</em>: the <code class="file docutils literal notranslate"><span class="pre">natural</span></code> shapefile</li>
+<li><em>Source points layer</em>: the <code class="file docutils literal notranslate"><span class="pre">places_clip_point</span></code> shapefile</li>
+<li><em>Destination hubs layer</em>: the <code class="file docutils literal notranslate"><span class="pre">natural_clip_point</span></code> shapefile</li>
 <li><em>Hub layer name attribute</em>: osm_id</li>
 <li><em>Measurement units</em>: meters</li>
 <li><em>Hub distance</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
@@ -249,8 +306,8 @@ the <code class="file docutils literal notranslate"><span class="pre">natural</s
 <a class="reference internal image-reference" href="../_images/3.4.3_distance_points.PNG"><img alt="../_images/3.4.3_distance_points.PNG" src="../_images/3.4.3_distance_points.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 3.4.3.1 </span><span class="caption-text">Distance from point to point function window</span></p>
 </div>
-<p>The result is a copy of the places layer, but each point feature has two additional attributes: the id of the nearest natural point feature,
-and the distance from it, as you can see from its attribute table:</p>
+<p>The result is a copy of the places layer, but each point feature has two additional attributes: the id of the nearest natural point feature
+(HubName) and the distance from it (HubDist), as you can see from its attribute table:</p>
 <a class="reference internal image-reference" href="../_images/3.4.3_distance_points_result.PNG"><img alt="../_images/3.4.3_distance_points_result.PNG" src="../_images/3.4.3_distance_points_result.PNG" style="width: 600px;" /></a>
 </div></blockquote>
 </div>
@@ -263,17 +320,18 @@ point features taken as origin and their closest destination line or polygon fea
 <p class="first admonition-title">Note</p>
 <p class="last">Distance calculations are based on the centroid of the line or polygon features.</p>
 </div>
-<p>In this case, we calculate the closest forest to each place. To do so, we select all the forests from the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer:</p>
+<p>In this case, we calculate the closest forest to each place. To do so, we select all the forests from the <code class="file docutils literal notranslate"><span class="pre">landuse_a_clip</span></code> layer:</p>
 <ul class="simple">
-<li>Right-click on the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer in the Layers panel and click on Open attribute table</li>
+<li>Right-click on the <code class="file docutils literal notranslate"><span class="pre">landuse_a_clip</span></code> layer in the Layers panel and click on Open attribute table</li>
 <li>Click on the Select features using an expression button</li>
 <li>In the window, write the following expression: <code class="docutils literal notranslate"><span class="pre">&quot;fclass&quot;</span> <span class="pre">is</span> <span class="pre">'forest'</span></code>, and then click “Select features”</li>
 </ul>
 <a class="reference internal image-reference" href="../_images/3.4.4_select_expression.PNG"><img alt="../_images/3.4.4_select_expression.PNG" src="../_images/3.4.4_select_expression.PNG" style="width: 800px;" /></a>
-<p>Once we have selected all the forests from the landuse layer, we can run the Distance to nearest hub (line to hub) function. The input parameters are:</p>
+<p>Once we have selected all the forests from the <code class="file docutils literal notranslate"><span class="pre">landuse_clip</span></code> layer, we can run the Distance to nearest hub (line to hub) function.
+The input parameters are:</p>
 <ul class="simple">
-<li><em>Source points layer</em>: the <code class="file docutils literal notranslate"><span class="pre">places</span></code> layer</li>
-<li><em>Destination hubs layer</em>: the <code class="file docutils literal notranslate"><span class="pre">landuse_a</span></code> layer, considering only selected features</li>
+<li><em>Source points layer</em>: the <code class="file docutils literal notranslate"><span class="pre">places_clip_point</span></code> layer</li>
+<li><em>Destination hubs layer</em>: the <code class="file docutils literal notranslate"><span class="pre">landuse_a_clip</span></code> layer, considering only selected features</li>
 <li><em>Hub layer name attribute</em>: osm_id</li>
 <li><em>Measurement units</em>: meters</li>
 <li><em>Hub distance</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>

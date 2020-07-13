@@ -8,11 +8,11 @@ Overlay operations
     an input layer and creates separate features for overlapping and non-overlapping parts. The area of overlap will create as many 
     identical overlapping features as there are features that participate to that overlap.
 
-    In this exercise, we perform an Union between the :file:`pois_a` layer (points of interest) and the :file:`buildings_a` layer, 
+    In this exercise, we will perform an Union between the :file:`pois_a_clip` layer (points of interest) and the :file:`buildings_a_clip` layer, 
     so that we will get a layer representing both residential buildings and interest/public buildings. The input parameters are:
 
-    + *Input layer*: :file:`pois_a` layer
-    + *Overlay layer*: :file:`buildings_a` layer
+    + *Input layer*: :file:`pois_a_clip` layer
+    + *Overlay layer*: :file:`buildings_a_clip` layer
     + *Union*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
     .. figure:: ../img/3.3.1_union.PNG
@@ -22,8 +22,10 @@ Overlay operations
 
     The result, if zoomed, should look like the following:
 
-    .. image:: ../img/3.3.1_union_result.PNG
+    .. figure:: ../img/3.3.1_union_result.PNG
         :width: 100%
+
+        As you can see now both residential and interest/public buildings are contained in the same vector layer
 
 :index:`Intersection <single: Intersection>`
 ############################################
@@ -32,8 +34,8 @@ Overlay operations
     that extracts the overlapping portions of the features of two layers and assigns these portions the attribute of both layers. 
     We use it to see which buildings are also religious buildings. The input parameters are:
 
-    + *Input layer*: :file:`buildings_a` layer
-    + *Overlay layer*: :file:`pofw_a` layer
+    + *Input layer*: :file:`buildings_a_clip` layer
+    + *Overlay layer*: :file:`pofw_a_clip` layer
     + *Intersection*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
     .. figure:: ../img/3.3.2_intersection.PNG
@@ -41,22 +43,24 @@ Overlay operations
 
         Intersection function window
 
-    The results should look like the following picture. As you can see, the intersection layer (yellow) 
-    only contains the buildings that also are religious buildings:
+    The results should look like the following picture:
 
-    .. image:: ../img/3.3.2_intersection_result.PNG
+    .. figure:: ../img/3.3.2_intersection_result.PNG
+        :width: 100%
+
+        As you can see, the intersection layer (yellow) only contains the buildings that also are religious buildings
 
 :index:`Dissolve <single: Dissolve>`
 ####################################
 
-    We will now use the Dissolve function applied to the :file:`landuse_a` layer. The Dissolve function, available at 
+    We will now use the Dissolve function applied to the :file:`landuse_a_clip` layer. The Dissolve function, available at 
     *Vector->Geoprocessing tools->Dissolve*, provides an algorithm that takes a vector layer and combines their features 
     into new features. One or more attributes can be specified to dissolve features belonging to the same class (having 
-    the same value of a specific attribute), alternatively, all features can be dissolved into a single one. 
+    the same value of a specific attribute); if no attribute is selected, all features will be dissolved into a single one. 
     We will create a new landuse layer that has as many features as the different types of land use. The input parameters are:
 
-    + *Input layer*: the :file:`landuse_a` layer
-    + *Dissolve fields*: click the icon on the left and select the “fclass” attribute
+    + *Input layer*: the :file:`landuse_a_clip` layer
+    + *Dissolve fields*: click the icon on the left and select the "fclass" attribute
     + *Dissolved*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
     .. figure:: ../img/3.3.3_dissolve.PNG
@@ -75,11 +79,12 @@ Overlay operations
     *Vector->Geoprocessing Tools->Difference*, that extracts features of an Input layer that fall outside features in the Overlay layer 
     (totally or partially). If a feature of the Input layer partially overlaps a feature of the Overlay layer only the portions outside 
     the Overlay layer features are retained. We will use it to filter out all the natural land use leaving only the industrial and urbanized ones. 
-    To do so, first, we have to select the natural landuse features:
+    To do so, first, we have to select the natural land use features:
 
     + Right-click on the :file:`landuse_dissolved` layer on the Layers panel
     + Open its Attribute table
-    + Manually select the features having these classes by holding :kbd:`Ctrl` and clicking on the row number on the left
+    + Manually select the features having natural land use classes (like the following ones) by holding :kbd:`Ctrl` and clicking on 
+      the row number on the left
 
         - heath
         - forest
@@ -91,11 +96,12 @@ Overlay operations
         - vineyard
         - grass
 
-    .. image:: ../img/3.3.4_difference_selection.PNG
+        .. image:: ../img/3.3.4_difference_selection.PNG
+            :width: 600px
 
     Now that we have selected those features, we can go on with the Difference operation. The input parameters are:
 
-    + *Input layer*: the :file:`landuse_a` layer
+    + *Input layer*: the :file:`landuse_a_clip` layer
     + *Overlay layer*: the :file:`landuse_dissolved` layer, but be sure to check the “Selected features only” checkbox
     + *Difference*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
@@ -104,16 +110,16 @@ Overlay operations
 
         Difference function window
 
-    The result will be a landuse layer that only retains the features with industrial and urbanized landuse types.
+    The result will be a land use layer that only retains the features with industrial and urbanized land use types.
 
 :index:`Symmetrical difference <single: Symmetrical difference>`
 ################################################################
 
     The Symmetrical difference, available at *Vector->Geoprocessing Tools->Symmetrical Difference*, provides a function that extracts 
     the portions of features from both the Input and Overlay layers that do not overlap. The attribute table of the Symmetrical Difference 
-    layer contains original attributes from both the Input and Overlay layers.
+    result layer contains original attributes from both the Input and Overlay layers.
 
-    If you look at the :file:`landuse_a` layer, you will see it has some portions that overlap with water features:
+    If you look at the :file:`landuse_a_clip` layer, you will see it has some portions that overlap with water features:
 
     .. figure:: ../img/3.3.5_landuse_water_1.PNG
 
@@ -123,11 +129,11 @@ Overlay operations
 
         Only landuse features (green)
 
-    We will use the Symmetrical difference to obtain a landuse layer with no feature that has parts in water bodies. 
+    We will use the Symmetrical difference to obtain a land use layer with no feature that has parts in water bodies. 
     To do so, the input parameters are:
 
     + *Input layer*: :file:`merge_vector` layer
-    + *Overlay layer*: :file:`water_a` layer
+    + *Overlay layer*: :file:`water_a_clip` layer
     + *Symmetrical Difference*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 
     .. figure:: ../img/3.3.5_symmetrical_difference.PNG
@@ -142,16 +148,16 @@ Overlay operations
 :index:`Spatial join <single: Spatial join>`
 ############################################
 
-    As you see with the intersection function we can find the buildings that are also religious places. We will now use the 
+    As you saw with the `Intersection`_ function we can find the buildings that are also religious places. We will now use the 
     Join Attributes by Location function (generally known as Spatial Join) available at *Vector->Data Management Tools->Join Attributes by Location*, 
     to extend the previous analysis. The Join attributes by location is a function that takes an input vector layer and creates a new vector 
-    layer that is an extended version of the input one, with additional attributes in its attribute table. The additional attributes and their 
+    layer that is an extended version of the input one, with additional attributes in its attribute table. This additional attributes and their 
     values are taken from a second vector layer applying spatial criteria to select the values from the second layer that are added to each 
     feature from the first layer in the resulting one. In this way we could add the attribute that specifies the religion practised in a 
     particular building; the input parameters are:
 
-    + *Input layer*: the buildings layer
-    + *Join layer*: the pofw_a layer
+    + *Input layer*: the :file:`buildings_a_clip` layer
+    + *Join layer*: the :file:`pofw_a_clip` layer
     + *Geometric predicate*: within
     + *Fields to add*: click on the icon on the left and select the “fclass” attribute
     + *Join type*: take attributes of the first located feature only (one-to-one)
@@ -167,5 +173,7 @@ Overlay operations
     that represents the religion practiced in that building.
 
     .. image:: ../img/3.3.6_spatial_join_result.PNG
+
+    |
 
     .. note:: The Join Attributes by Location function, specifying the “intersects” predicate, also translates the “Identity” function of ArcGIS

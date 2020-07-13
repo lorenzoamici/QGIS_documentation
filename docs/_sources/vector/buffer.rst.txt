@@ -10,7 +10,7 @@ You can turn-off all the other layers in the Layers panel to have a more compact
 :index:`Single buffer <single: Buffer>`
 #######################################
 
-    A very common operation with line shapefiles is the buffer which allows to create an area within a specified distance from features. 
+    A very common operation with line shapefiles is the buffer, which allows to create an area within a specified distance from features. 
     Note that in QGIS a buffer can be done also around point or polygon shapefiles. To create a buffer, click on 
     *Vector->Geoprocessing Tools->Buffer* and specify the input parameters as follows:
 
@@ -43,6 +43,8 @@ You can turn-off all the other layers in the Layers panel to have a more compact
     .. image:: ../img/3.1_processing_toolbox.png
         :width: 100%
 
+    |
+
     In this case, you can search for “Multi-ring” and select the function *Multi-ring buffer (constant distance)*. The input parameters are: 
 
     + *Input layer*: the :file:`roads_clip` layer
@@ -52,6 +54,8 @@ You can turn-off all the other layers in the Layers panel to have a more compact
 
     .. image:: ../img/3.1_multi_ring_buffer.PNG
         :width: 800px
+
+    |
 
     This will create a three buffer areas around our roads layer; if you zoom on your map, and if properly styled, the result should look like this:
 

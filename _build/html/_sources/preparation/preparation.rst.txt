@@ -191,7 +191,7 @@ In order to homogenize the works and assure that all the tools work correctly, i
     layer with the same features as the input one, but with geometries reprojected to a new CRS. 
     The required input parameters are:
 
-    + *Input layer*: the vector layer to be reprojected (in the example *buildings_a*)
+    + *Input layer*: the vector layer to be reprojected (in the example :file`buildings_a`)
     + *Target CRS*: the target Coordinate Reference System. You can choose from the 
       recent ones in the dropdown menu or click the icon to choose between all the available ones. Our choice will be 
       :guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`
@@ -207,7 +207,7 @@ In order to homogenize the works and assure that all the tools work correctly, i
 
     Available at *Raster->Projections->Warp (reproject)*, it provides a function that reprojects a raster layer. The tool requires as input:
     
-    + *Input layer*: the raster layer to be reprojected (in the example the *Seoul_DTM*)
+    + *Input layer*: the raster layer to be reprojected (in the example the :file:`Seoul_DTM`)
     + *Target CRS*: the target Coordinate Reference System. You can choose from the recent ones in the dropdown menu or click the icon to choose between 
       all the available ones. Our choice will be :guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`
     + *Resampling method to use*: the method to be used for resampling the data, we will use the *Nearest Neighbor*
@@ -225,7 +225,7 @@ CRS setting button in the bottom right of the window and select also here :guila
 .. image:: ../img/2.4.2_reproject_map.png
     :width: 100%
 
-.. note:: In this exercise we will refer to the new reprojected layers as :file:`{originalname}_rep`. 
+.. note:: In this exercise we will refer to the reprojected layers as :file:`{originalname}_rep`. 
     You can create your new layers with the same name in order to be consistent with the naming.
 
 .. note:: After reprojecting all the layers be sure to delete the original layers. You can do this 
@@ -263,18 +263,22 @@ in this way we shorten computational times and also provide consistency to the d
 
     Once you created the layer, you need to add the polygon representing the working area:
 
-        + Right click on area_of_interest in the Layer panel and select “Toggle editing”
+        + Right click on :file:`area_of_interest` in the Layers panel and select “Toggle editing”
         + Right-click anywhere on the top toolbar (or go to *View->Toolbars* and add it from there) 
           and enable the “Shape digitizing toolbar”. This way we can add a perfect rectangle polygon to our shapefile
         + Click on “Add rectangle from extent”
 
         .. image:: ../img/2.5.1_add_rectangle.PNG
 
+        |
+
         + Draw a rectangle in the area around Seoul by left-clicking to start drawing from an angle and then right-clicking 
-          when the size is the desired one (not too big but big enough to contain some of the natural points, see the picture below)
+          when the size is the desired one (not too big, take the picture below as reference)
 
         .. image:: ../img/2.5.1_aoi.PNG
             :width: 100%
+        
+        |
 
         + Click on “Save layer edits” and toggle editing off
 
@@ -315,7 +319,7 @@ in this way we shorten computational times and also provide consistency to the d
 
 In order to continue with the tutorial please clip all the vector and the DTM raster layer following the examples above.
 
-.. note:: In this exercise we will refer to the new clipped layers as :file:`{originalname}_clip`. You can create your 
+.. note:: In this exercise we will refer to the clipped layers as :file:`{originalname}_clip`. You can create your 
     new layers with the same name in order to be consistent with the naming
 
 .. note:: After clipping all the layers you can delete the starting layers from the Layers panel.

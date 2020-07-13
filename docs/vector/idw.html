@@ -39,8 +39,8 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Raster operations" href="../raster/raster.html" />
     <link rel="prev" title="3.6. Kernel density" href="kernel.html" />
-    <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
-
+        <link href="../_static/my_theme.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.1
+                1.0
               </div>
             
           
@@ -87,6 +87,7 @@
         
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+        
             
             
               
@@ -94,23 +95,79 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/general.html">1. General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#purpose-of-this-documentation">1.1. Purpose of this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#target-audience">1.2. Target audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/general.html#license">1.3. License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preparation/preparation.html">2. Preparation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#install-qgis">2.1. Install QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#download-the-data">2.2. Download the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#create-a-new-project">2.3. Create a new project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#import-vector-data">2.3.1. Import vector data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#import-raster-data">2.3.2. Import raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#layers-panel">2.3.3. Layers panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#manipulate-crs-of-the-project-and-the-data">2.4. Manipulate CRS of the project and the data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#reprojecting-vector-layers">2.4.1. Reprojecting vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#reprojecting-raster-layers">2.4.2. Reprojecting raster layers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparation/preparation.html#clip-all-the-data-to-the-study-area">2.5. Clip all the data to the study area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#create-the-working-area">2.5.1. Create the working area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#clipping-vector-layers">2.5.2. Clipping vector layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preparation/preparation.html#clipping-raster-layers">2.5.3. Clipping raster layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="vector.html">3. Vector operations</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buffer.html">3.1. Buffer operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buffer.html#single-buffer">3.1.1. Single buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buffer.html#multi-ring-buffer">3.1.2. Multi-ring buffer</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="merge.html">3.2. Merge vector layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overlay.html">3.3. Overlay operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="proximity.html">3.4. Proximity analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="network.html">3.5. Network analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay.html">3.3. Overlay operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#union">3.3.1. Union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#intersection">3.3.2. Intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#dissolve">3.3.3. Dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#difference">3.3.4. Difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#symmetrical-difference">3.3.5. Symmetrical difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlay.html#spatial-join">3.3.6. Spatial join</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="proximity.html">3.4. Proximity analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="proximity.html#convert-geometry-type">3.4.1. Convert geometry type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proximity.html#average-nearest-neighbor">3.4.2. Average Nearest Neighbor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proximity.html#distance-from-point-to-point">3.4.3. Distance from point to point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proximity.html#distance-from-point-to-layer">3.4.4. Distance from point to layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">3.5. Network analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="network.html#shortest-path">3.5.1. Shortest path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html#generate-service-area">3.5.2. Generate service area</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="kernel.html">3.6. Kernel density</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3.7. Inverse Distance Weighting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../raster/raster.html">4. Raster operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raster/raster.html">4. Raster operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raster/merge.html">4.1. Merge raster</a></li>
+</ul>
+</li>
 </ul>
 
             
           
+        <p class="caption">
+            <span class="caption-text">Functions:</span>
+        </p>
+        <a href="genindex.html">Index</a>
+    
         </div>
         
       </div>
@@ -179,15 +236,49 @@
 <p>We can also interpolate a point layer to create a raster layer out of it. One method to do so is the Inverse Distance Weighting (IDW)
 interpolation technique. To perform IDW interpolation in QGIS we have to rely on the external functionalities provided by GRASS GIS that
 are directly accessible form the Processing Toolbox of QGIS.
-The function is called v.surf.idw, and it’s available at <em>Processing Toolbox-&gt;GRASS-&gt;Vector(.v*)</em>. We can compute a raster by interpolating
-the places layer, using as the interpolation variable the population:</p>
+The function is called <em>v.surf.idw</em>, and it’s available at <em>Processing Toolbox-&gt;GRASS-&gt;Vector(.v*)</em>. We can compute a raster by interpolating
+the <code class="file docutils literal notranslate"><span class="pre">places_clip_point</span></code> layer, using as the interpolation variable the population. But first, we need to select all the cities and towns that have a valid
+population attribute (i.e. &gt; 0): to do so, follow these steps:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Input vector layer: the places layer</li>
-<li>Attribute table column with values to interpolate: select population</li>
-<li>Interpolated IDW: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
+<li>Right click on the <code class="file docutils literal notranslate"><span class="pre">places_clip_point</span></code> layer and open its Attribute table</li>
+<li>Click on “Select features using an expression”</li>
+<li>In the window, write the following expression: <code class="docutils literal notranslate"><span class="pre">&quot;population&quot;</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, and then click “Select features”</li>
 </ul>
+<a class="reference internal image-reference" href="../_images/3.7_IDW_select.PNG"><img alt="../_images/3.7_IDW_select.PNG" src="../_images/3.7_IDW_select.PNG" style="width: 800px;" /></a>
 </div></blockquote>
+<p>Now that we have selected all the places with population greater than 0, we can proceed with the IDW interpolation. Click on the
+v.surf.idw function and input the following parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Input vector layer</em>: the <code class="file docutils literal notranslate"><span class="pre">places_clip_point</span></code> layer, be sure to tick the “Selected features only” option</li>
+<li><em>Number of interpolation points</em>: 200</li>
+<li><em>Attribute table column with values to interpolate</em>: select “population”</li>
+<li><em>Interpolated IDW</em>: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/3.7_IDW.PNG"><img alt="../_images/3.7_IDW.PNG" src="../_images/3.7_IDW.PNG" style="width: 800px;" /></a>
+</div></blockquote>
+<p>The result should initally look like this:</p>
+<a class="reference internal image-reference" href="../_images/3.7_IDW_result_1.PNG"><img alt="../_images/3.7_IDW_result_1.PNG" src="../_images/3.7_IDW_result_1.PNG" style="width: 100%;" /></a>
+<p>Since this result is not really optimal for an analysis, we can try to style it in a better way. To do so:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Right-click on the newly created raster and click on “Properties”</li>
+<li>In the window, select “Symbology” from the menu on the left</li>
+<li>Change the first option (“Render type”) to “Singleband pseudocolor”</li>
+<li>Now change the classification mode to “Quantile”</li>
+<li>Change the number of classes to 9</li>
+<li>Click “Ok”</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/3.7_IDW_symbology.PNG"><img alt="../_images/3.7_IDW_symbology.PNG" src="../_images/3.7_IDW_symbology.PNG" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/3.7_IDW_symbology_2.PNG"><img alt="../_images/3.7_IDW_symbology_2.PNG" src="../_images/3.7_IDW_symbology_2.PNG" style="width: 800px;" /></a>
+</div></blockquote>
+<p>Now the result should be subdivided in 9 classes that contain an equal number of pixels each; the raster should look like this:</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/3.7_IDW_result_2.PNG"><img alt="../_images/3.7_IDW_result_2.PNG" src="../_images/3.7_IDW_result_2.PNG" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.7.1 </span><span class="caption-text">Now it’s easier to distinguish the variation in population: note for example the dark red area in the top part of the image that represents
+the area where the capital Seoul is.</span></p>
+</div>
 </div>
 
 

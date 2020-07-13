@@ -11,8 +11,8 @@ Network analysis
     We illustrate here only the point to point option for the sake of computation, but the others are easily deduced from the following example.
     The function is available at *Processing Toolbox->Network analysis->Shortest path (point to point)*, and the input parameters are:
 
-    + *Vector network layer*: the :file:`roads` layer
-    + *Path type to calculate*: shortest (you can also calculate the fastest path given a network layer with maximum velocity information)
+    + *Vector network layer*: the :file:`roads_clip` layer
+    + *Path type to calculate*: "shortest" (you can also calculate the fastest path given a network layer with maximum velocity information)
     + *Start point*: click on the icon on the right, then choose a starting point from the map
     + *End point*: click on the icon on the right, then choose an ending point from the map
     + *Shortest path*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
@@ -32,14 +32,14 @@ Network analysis
 ##############################################################
 
     In QGIS, we can also generate a service area using the Service Area function. To perform such, you can search for Service area in the Processing 
-    toolbox searchbar and select *Service area (from point)*. This function allows creating a vector with all the edges or parts of edges of a network 
+    toolbox searchbar and select *Service area (from point)*. This function allows creating a vector with all the parts of a network 
     layer that can be reached within a distance or a time, starting from a point chosen on the map. The same can be done starting from a point layer 
     using *Service area (from layer)*. We will use the last one to calculate the service area for all the places points with a maximum travel distance 
     of 100 meters. The input parameters are:
 
-    + *Vector network layer*: the :file:`roads` network
-    + *Vector layer with start points*: the :file`places` layer
-    + *Path type to calculate*: shortest (you can also calculate the fastest path given a network layer with maximum velocity information)
+    + *Vector network layer*: the :file:`roads_clip` network
+    + *Vector layer with start points*: the :file:`places_clip_point` layer
+    + *Path type to calculate*: "shortest" (you can also calculate the fastest path given a network layer with maximum velocity information)
     + *Travel cost*: 100 (so that the maximum travel distance is 100m)
     + *Service area*: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created
 

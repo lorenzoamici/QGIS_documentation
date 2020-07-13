@@ -1,4 +1,12 @@
 {% extends "!layout.html" %}
-{% block extrahead %}
-    <link href="{{ pathto("_static/my_theme.css", True) }}" rel="stylesheet" type="text/css">
-{% endblock %}
+    {% block extrahead %}
+        <link href="{{ pathto("_static/my_theme.css", True) }}" rel="stylesheet" type="text/css">
+    {% endblock %}
+
+    {% block menu %}
+        {{ super() }}
+        <p class="caption">
+            <span class="caption-text">Functions:</span>
+        </p>
+        <a href="genindex.html">Index</a>
+    {% endblock %}

@@ -59,7 +59,7 @@ author = 'Lorenzo Amici'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '1.0'
 # The full version, including alpha/beta/rc tags.
 release = ''
 
@@ -104,7 +104,8 @@ html_logo = '/home/yedi/Desktop/Sphinx/img/1200px-QGIS_logo,_2017.svg.png'
 #
 html_theme_options = {
     'logo_only': False,
-    'style_external_links': True
+    'style_external_links': True,
+    'collapse_navigation': False
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
