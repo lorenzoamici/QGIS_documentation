@@ -113,6 +113,12 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = ['my_theme.css']
+
+html_last_updated_fmt = ''
+
+html_search_language = 'en'
+
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
@@ -184,5 +190,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-def setup(app):
-    app.add_css_file('my_theme.css')
+#def setup(app):
+#    app.add_css_file('my_theme.css')
