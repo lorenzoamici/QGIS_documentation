@@ -5,6 +5,7 @@ We will now focus on the analysis and manipulation of line shapefiles. To do so,
 You can turn-off all the other layers in the Layers panel to have a more compact visualization of the data.
 
 .. image:: ../img/3_roads_network.PNG
+    :width: 100%
 
 :index:`Single buffer <single: Buffer>`
 #######################################
