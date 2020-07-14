@@ -374,7 +374,7 @@ For this exercise, you can add the following data:</p>
 </div></blockquote>
 </div>
 <div class="section" id="layers-panel">
-<h3>2.3.3. Layers panel<a class="headerlink" href="#layers-panel" title="Permalink to this headline">¶</a></h3>
+<span id="layerspanel"></span><h3>2.3.3. Layers panel<a class="headerlink" href="#layers-panel" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>The Layers panel is a useful way to keep track of all the layers currently loaded in our Project. It’s usually placed
 below the Browser panel, but if you don’t have it activated you can do so by clicking on <em>View-&gt;Panels</em> and tick “Layers”.</p>
@@ -447,7 +447,10 @@ all the available ones. Our choice will be <span class="guilabel">EPSG:32652 - W
 <p>In order to continue with the tutorial please reproject all the imported vector and raster layers following the examples above.
 Once all the layers are reprojected we need to check if the CRS of the project is the same as the data: to do so, click on the
 CRS setting button in the bottom right of the window and select also here <span class="guilabel">EPSG:32652 - WGS 84 / UTM zone 52N</span>.</p>
+<div class="figure" id="id7">
 <a class="reference internal image-reference" href="../_images/2.4.2_reproject_map.png"><img alt="../_images/2.4.2_reproject_map.png" src="../_images/2.4.2_reproject_map.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.4.2.2 </span><span class="caption-text">You can see the Project CRS button highlighted in red</span></p>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In this exercise we will refer to the reprojected layers as <code class="file docutils literal notranslate"><em><span class="pre">originalname</span></em><span class="pre">_rep</span></code>.
@@ -530,7 +533,7 @@ the vector layer if there are any</li>
 <li><em>Overlay layer</em>: the <code class="file docutils literal notranslate"><span class="pre">area_of_interest</span></code> layer</li>
 <li><em>Clipped</em>: the path and the name of the output vector layer. Note that if left empty a temporary layer will be created</li>
 </ul>
-<div class="figure" id="id7">
+<div class="figure" id="id8">
 <a class="reference internal image-reference" href="../_images/2.5.2_clip_vector.PNG"><img alt="../_images/2.5.2_clip_vector.PNG" src="../_images/2.5.2_clip_vector.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.5.2.1 </span><span class="caption-text">Clip vector function layer</span></p>
 </div>
@@ -548,7 +551,7 @@ The input parameters are:</p>
 <li><em>Mask layer</em>: the <code class="file docutils literal notranslate"><span class="pre">area_of_interest</span></code> layer</li>
 <li><em>Clipped (extent)</em>: the path and the name of the output raster layer. Note that if left empty a temporary layer will be created</li>
 </ul>
-<div class="figure" id="id8">
+<div class="figure" id="id9">
 <a class="reference internal image-reference" href="../_images/2.5.3_clip_raster.PNG"><img alt="../_images/2.5.3_clip_raster.PNG" src="../_images/2.5.3_clip_raster.PNG" style="width: 800px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.5.3.1 </span><span class="caption-text">Clip raster by mask layer function window</span></p>
 </div>
@@ -593,7 +596,7 @@ new layers with the same name in order to be consistent with the naming</p>
         
         &copy; Copyright 2020, Lorenzo Amici
       <span class="lastupdated">
-        Last updated on Jul 13, 2020.
+        Last updated on Jul 14, 2020.
       </span>
 
     </p>

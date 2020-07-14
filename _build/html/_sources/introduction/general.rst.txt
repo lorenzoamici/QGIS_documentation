@@ -28,7 +28,7 @@ management in a GIS environment
 License
 #######
 
-This educational material was written by Lorenzo Amici and Daniele Oxoli of Politecnico di Milano.
+This educational material was written by Eng. Lorenzo Amici and Dr. Daniele Oxoli of Politecnico di Milano.
 
 It is distributed according to the CREATIVE COMMONS deed: Attribution - NoDerivs 2.0. According to this license type you are free to:
 

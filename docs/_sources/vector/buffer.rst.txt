@@ -2,7 +2,7 @@ Buffer operations
 =================
 
 We will now focus on the analysis and manipulation of line shapefiles. To do so, let’s consider only the :file:`roads_clip` shapefile. 
-You can turn-off all the other layers in the Layers panel to have a more compact visualization of the data.
+You can turn-off all the other layers in the :ref:`layerspanel` to have a more compact visualization of the data.
 
 .. image:: ../img/3_roads_network.PNG
     :width: 100%
@@ -57,7 +57,7 @@ You can turn-off all the other layers in the Layers panel to have a more compact
 
     |
 
-    This will create a three buffer areas around our roads layer; if you zoom on your map, and if properly styled, the result should look like this:
+    This will create three buffer areas around our roads layer; if you zoom on your map, and if properly styled, the result should look like this:
 
     .. image:: ../img/3.1_multi_ring_buffer_result.PNG
         :width: 100%

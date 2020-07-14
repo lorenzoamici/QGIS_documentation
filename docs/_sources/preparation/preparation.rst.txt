@@ -145,6 +145,8 @@ Create a new project
 
     + :file:`Seoul_DTM.tif`
 
+.. _layerspanel:
+
 Layers panel
 ------------
 
@@ -222,8 +224,10 @@ In order to continue with the tutorial please reproject all the imported vector 
 Once all the layers are reprojected we need to check if the CRS of the project is the same as the data: to do so, click on the 
 CRS setting button in the bottom right of the window and select also here :guilabel:`EPSG:32652 - WGS 84 / UTM zone 52N`.
 
-.. image:: ../img/2.4.2_reproject_map.png
+.. figure:: ../img/2.4.2_reproject_map.png
     :width: 100%
+
+    You can see the Project CRS button highlighted in red
 
 .. note:: In this exercise we will refer to the reprojected layers as :file:`{originalname}_rep`. 
     You can create your new layers with the same name in order to be consistent with the naming.
