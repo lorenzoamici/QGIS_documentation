@@ -1,5 +1,5 @@
-QGIS 3.4 LTS documentation
-==========================
+QGIS 3.10 LTR documentation
+===========================
 
 Built using Sphinx 4.0.0
 ------------------------

@@ -6,7 +6,7 @@ In this section we will show all the necessary setup steps in order to follow al
 Install QGIS
 ############
 
-    Download QGIS 3.14 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.14.0-1-Setup-x86_64.exe>`_. 
+    Download QGIS 3.10 (Long Term Release) for Windows 64bit at `<https://qgis.org/downloads/QGIS-OSGeo4W-3.10.7-1-Setup-x86_64.exe>`_. 
     Other versions are available in the `QGIS Download page <https://qgis.org/en/site/forusers/download.html>`_.
 
     .. note:: After downloading QGIS, you will have various option to launch the program, as you see in this image:
