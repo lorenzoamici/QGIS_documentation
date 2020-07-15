@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'QGIS UN'
+project = 'QGIS 3.10 - Geo-analysis Practice'
 copyright = '2020, Lorenzo Amici'
 author = 'Lorenzo Amici'
 
