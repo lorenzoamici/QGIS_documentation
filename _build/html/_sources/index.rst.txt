@@ -10,7 +10,7 @@ QGIS 3.10 - Geo-analysis Practice
 ==============================================
 
 This educational material has been developed by Eng. Lorenzo Amici, Dr. Daniele Oxoli, Prof. Maria A. Brovelli and 
-Prof. Fabio Salice of Politecnico di Milano (Italy) with the mentorship of Dr. HaeKyong Kang of the Korea Research Institute for 
+Prof. Fabio Salice of Politecnico di Milano (Italy) with the mentorship and support of Dr. HaeKyong Kang of the Korea Research Institute for 
 Human Settlements, within the project of collaboration between the `OSGEO foundation <https://www.osgeo.org/>`_ and the 
 `UN Open GIS initiative <http://unopengis.org/>`_.
 
