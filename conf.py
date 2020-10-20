@@ -34,7 +34,6 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     "sphinx_rtd_theme",
-    "rst2pdf.pdfbuilder",
     "sphinx.ext.githubpages",
 ]
 
