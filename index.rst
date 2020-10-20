@@ -30,4 +30,3 @@ Index
 *****
 
 * :ref:`genindex`
-* introduction/general
