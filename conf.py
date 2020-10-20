@@ -22,6 +22,9 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
 
+def setup(app):
+    app.add_css_file('my_theme.css')
+
 
 # -- General configuration ------------------------------------------------
 
